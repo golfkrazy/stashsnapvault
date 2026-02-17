@@ -1,0 +1,12 @@
+1/28/2026 console.cloud.google.com : golfkrazy@gmail.com
+
+client id = 1017737776687-h3ffnd0noh0vlhfebfjfr3iqtu0nvemp.apps.googleusercontent.com
+secret key = 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
+
+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
+
+Supabase Redirect
+
+https://sdgsmaxevwrinigwsdeu.supabase.co
+
+https://sdgsmaxevwrinigwsdeu.supabase.co/auth/v1/callback

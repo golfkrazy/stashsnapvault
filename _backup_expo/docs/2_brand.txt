@@ -1,0 +1,376 @@
+PROMPT START
+ROLE & GOAL:
+
+Act as a "Brand & Design Syndicate," a specialized team hired to translate a strategic research summary into a comprehensive and actionable brand identity and design system. Your team consists of:
+
+The Brand Strategist: An expert in brand positioning, voice, and narrative.
+The Lead UI/UX Designer: An expert in visual systems, color theory, typography, and component-based design.
+The Lead Front-End Developer: An expert in implementation, accessibility, responsive design, and design tokens.
+Your goal is to use the provided Research Summary as the single source of truth to create a formal Brand Identity & Design System. The final output must be a single markdown file, meticulously structured to match the provided format, tone, and technical depth.
+
+PRIMARY INPUT:
+
+Research Summary:
+[Customer Avatar: The Problem Aware Caregiver
+
+Stage of Awareness: Problem Aware
+
+
+
+
+A → Who Are They:
+
+•
+Name: Carol Peterson
+
+•
+Gender: Female
+
+•
+Age: 54
+
+•
+Job: Part-time Administrative Assistant at a local law firm
+
+•
+Household Income: $75,000 (combined with husband)
+
+•
+Marital Status: Married for 28 years
+
+•
+Education Level: Associate’s Degree in Business Administration
+
+B → What They Do & Like:
+
+•
+Top 3 Brands they wear: Talbots, Clarks, L.L. Bean
+
+•
+1-2 Hobbies they have: Gardening, Member of a monthly book club
+
+•
+Top 5 Favorite movies: The Shawshank Redemption, Forrest Gump, It's a Wonderful Life, When Harry Met Sally, Steel Magnolias
+
+•
+Top 5 Favorite books: Where the Crawdads Sing by Delia Owens, The Nightingale by Kristin Hannah, anything by Nora Roberts, The Help by Kathryn Stockett, To Kill a Mockingbird by Harper Lee
+
+•
+Top 5 visited websites: Facebook, AARP.org, Allrecipes.com, Local news station website, WebMD
+
+•
+Top 5 relevant social media influencers: @TheCaregiverSpace, @HappyHealthyCaregiver, @AgingParents, local community Facebook groups, parenting blogs from the early 2010s she still follows.
+
+C → Why Are They:
+
+•
+Main Personality Traits: Responsible, nurturing, pragmatic, detail-oriented, but increasingly anxious and stretched thin. She’s the person everyone in the family turns to when something needs to be organized or a problem needs solving. She carries this weight with a sense of duty, but it’s becoming a heavy burden.
+
+•
+5 Major Values They Hold:
+
+1.
+Family First: Her family’s well-being is her absolute top priority.
+
+2.
+Responsibility: She believes in honoring her commitments, especially to her parents and children.
+
+3.
+Financial Prudence: Having grown up in a middle-class family, she is careful with money and looks for value in every purchase.
+
+4.
+Honesty: She values truth and directness, even when it’s difficult.
+
+5.
+Tradition: She cherishes family traditions and the heirlooms that represent their history.
+
+
+
+•
+2 Major Life Victories:
+
+1.
+Raising two successful, independent children who are now in college. She feels immense pride in the adults they have become.
+
+2.
+Successfully navigating her husband’s job loss a decade ago, managing the family budget tightly and re-entering the workforce part-time to keep them afloat.
+
+
+
+•
+2 Major Life Failures:
+
+1.
+She secretly feels she failed her father in his final years, not realizing the extent of his illness until it was too late. This fuels her anxiety about caring for her mother.
+
+2.
+She regrets not finishing her four-year college degree, a personal goal she sacrificed for her family, which sometimes makes her feel less accomplished than her peers.
+
+
+
+D → Smart Market Questions
+
+•
+What keeps them awake at night, eyes open, staring at the ceiling: “Did Mom take her pills? Did I remember to lock her back door? Where on earth did she put her wedding rings? She said she put them in a ‘safe place.’ What if she threw them out by accident? What if a contractor or a visitor took them and she just thinks she hid them? I’ll have to spend all day Saturday tearing the house apart again. I can’t handle another weekend like that. I’m so tired.”
+
+•
+What are they secretly afraid of in life: She is terrified of her mother declining into severe dementia and becoming a stranger. More acutely, she fears the day her mother needs something vital—a passport for an ID, her social security card, the deed to the house—and it’s been hidden so well that it is lost forever, creating a legal and financial nightmare.
+
+•
+What are they angry about, and who are they angry at: She is angry at the situation, at the disease of aging itself. She feels a simmering resentment towards her brother who lives two states away and only calls on holidays, offering platitudes but no real help. She’s also angry with herself for her impatience and for the flashes of frustration she feels towards her mother, which are immediately followed by waves of guilt.
+
+•
+Top 3 frustrations they feel every day:
+
+1.
+The constant, low-grade anxiety of not knowing what the next phone call will bring—a fall, a forgotten appointment, or another lost item.
+
+2.
+The mental exhaustion of having to remember everything for everyone: her husband’s schedule, her kids’ college deadlines, and now, the entire contents of her mother’s life.
+
+3.
+The feeling of being pulled in a dozen different directions, never having a moment to herself to just breathe or read a book without her mind racing.
+
+
+
+•
+Biggest secret desire in life: To have just one week where she is not responsible for anyone else. A week where she can turn off her phone, read a stack of books, and not have to worry about another person’s needs.
+
+•
+Built-in bias to how they make decisions: She is a pragmatist. She makes decisions based on practicality, reliability, and recommendations from people she trusts. She is skeptical of flashy new technology and prefers simple, straightforward solutions that solve a clear problem without a steep learning curve.
+
+•
+Common words or language unique to them: “Oh, for heaven’s sake.” “It is what it is.” “We’ll figure it out.” “She put it in a ‘safe place’.” “Senior moment.” “I’ve got it on my list.” “This is just part of getting older.”
+
+•
+Top 3 complaints about existing solutions: She hasn’t even conceived of a category of solution yet. Her current “solutions” are just coping mechanisms:
+
+1.
+“My brain is the only thing keeping track, and it’s completely overloaded. My system of sticky notes and lists is a disaster.”
+
+2.
+“I try to get Mom to write things down, but she either forgets, loses the notebook, or gets agitated and refuses.”
+
+3.
+“I’ve tried taking pictures of where she puts things, but my phone’s photo album is a chaotic mess of grandkids, recipes, and now, a picture of a wallet inside a shoebox. I can never find the photo when I need it.”
+
+
+
+E → Going Deep
+
+•
+Top 3 Dominant Negative Emotions:
+
+1.
+Anxiety: A constant, humming fear about what might be lost next and the potential consequences.
+
+2.
+Guilt: Feeling guilty for her frustration, for not being more patient, and for not being able to “fix” her mother’s memory.
+
+3.
+Frustration: The sheer, repetitive frustration of searching for the same items over and over, and the feeling of helplessness.
+
+
+
+•
+Top 3 Dominant Positive Emotions From Solving This Problem:
+
+1.
+Relief: The immense, soul-deep relief of knowing that important items are accounted for and can be found easily.
+
+2.
+Peace of Mind: The ability to go to sleep at night without the mental checklist of lost items and potential disasters running through her head.
+
+3.
+Control: A renewed sense of control over a chaotic and unpredictable situation, feeling proactive rather than reactive.
+
+
+
+•
+Top 3 Beliefs They Hold About The World:
+
+1.
+“Hard work and dedication are how you show love.”
+
+2.
+“You have to be prepared for the worst, because you never know what’s around the corner.”
+
+3.
+“Family takes care of family, no matter what.”
+
+
+
+•
+Biggest Lifestyle Desire: To simplify her life and reduce her mental load so she can enjoy her time with her family, including her mother, without the constant undercurrent of stress and worry.
+
+F → Purchasing Habits
+
+•
+Top 3 Decision Triggers:
+
+1.
+A trusted recommendation: If a friend in a similar situation, a respected blogger, or an article from a source like AARP recommended it, she would pay attention.
+
+2.
+Simplicity and Ease of Use: It has to look simple. If it seems complicated or requires a lot of setup, she’ll immediately dismiss it.
+
+3.
+A Major “Scare”: A close call, like almost missing a flight because her mother couldn’t find her ID, would be a powerful catalyst to seek a real solution.
+
+
+
+•
+Prior Purchases For This Pain: She hasn’t purchased anything specifically for this pain because she doesn’t know a product category exists. Her “purchases” have been things like notebooks, sticky notes, and label makers, all of which have failed to solve the core problem.
+
+•
+Price Tolerance For Offer: Extremely high. For a one-time purchase that solves this massive, daily pain point, she would see $0.99 as an absolute no-brainer. She would be skeptical of a free app (wondering “what’s the catch?”) but would find a low, one-time price point to be a sign of a straightforward, honest tool.
+
+•
+Time Horizon Of Solution: She needs a solution that works now. She is not interested in a long-term system that requires months of training or data entry. She needs immediate relief from her daily frustration.
+
+G → Primary Wants
+
+•
+Wants to gain: Peace of mind, a sense of security, more free time.
+
+•
+Wants to be: A good daughter, organized, prepared, less stressed.
+
+•
+Wants to do: Spend quality time with her mother without it turning into a frantic search. Enjoy her hobbies without being interrupted by a crisis.
+
+•
+Wants to save: Time, energy, her own sanity.
+
+•
+Wants to avoid: Losing something irreplaceable, family conflict over lost items, legal or financial problems, the gut-wrenching feeling of panic when something important is missing.
+
+H → Empathy Map
+
+•
+Seeing: Her mother’s confused and distressed face when she can’t find something. The ever-growing pile of mail and papers on the counter. Her phone screen lighting up with a call from “Mom.” Her husband’s worried expression when he asks how her day was. Piles of clutter in her mother’s house that she needs to sort through.
+
+•
+Thinking: “I can’t keep this up. Something’s got to give. Why can’t I be more patient? Am I doing enough? What if I forget something important? I feel like I’m failing her and my own family.”
+
+•
+Hearing: Her mother’s anxious voice on the phone: “Carol, I can’t find my purse anywhere!” Her brother’s cheerful, unhelpful advice: “Just relax, Mom, it’ll turn up!” The notification sounds on her phone, each one a potential new problem.
+
+•
+Feeling: Overwhelmed, anxious, guilty, resentful, tired, but also a deep sense of love and duty.
+
+•
+Saying: “It’s okay, Mom, we’ll find it.” “I’m fine, just a little tired.” “I’ll be over in a little bit to look for it.” “Yes, I remembered to pay that bill for you.”
+
+•
+Doing: Juggling her part-time job with her caregiving duties. Making endless lists. Rushing from her house to her mother’s house. Spending hours searching through drawers, closets, and bizarre hiding spots. Forcing a smile and a calm tone when she feels like screaming.
+
+]
+TASK: GENERATE THE BRAND IDENTITY & DESIGN SYSTEM
+
+Produce the document by collaborating as the Brand & Design Syndicate. Each expert will lead their relevant sections, ensuring every decision is rooted in the information from the Research Summary. Structure the output in markdown format precisely as follows:
+
+# [StashSnap] Brand Identity & Design System (Extract the business name from the Research Summary)
+
+## Brand Identity (Contribution led by the Brand Strategist)
+
+### Brand Essence (Distill the Project Overview and Value Proposition from the Research Summary into 5-7 core brand attributes. Examples: Professionalism, Innovation, Efficiency, Reliability, Security.)
+
+### Brand Voice (- Tone: Define the tone based on the target audience (e.g., Professional, confident, reassuring).
+
+Language: Describe the language style (e.g., Clear, jargon-free explanations).
+Communication Style: Describe the overall approach (e.g., Solution-oriented, emphasizing benefits).)
+### Brand Narrative (Write a short, compelling paragraph that tells the story of the brand. It should summarize what the business does, for whom, and why it matters, drawing heavily from the Project Overview and Avatar Research Insights.)
+
+## Design System (Contribution led by the Lead UI/UX Designer and Lead Front-End Developer)
+
+### Color Palette
+
+#### Primary Colors (- Gradient Base: State that the gradient from the Research Summary is the brand's identity. You must copy the exact CSS linear-gradient from the Research Summary input.
+
+Primary Colors (Extracted from gradient): List the 6-8 key colors from the gradient by their hex code. For each color, give it a name (e.g., Orange, Teal) and a one-word attribute (e.g., Energy, Trust).)
+#### Secondary Colors (Define a standard set of neutral colors for UI. Propose specific hex codes for: Dark Blue (primary text), Medium Gray (secondary text), Light Gray (backgrounds), White, and Black.)
+
+#### Functional Colors (Define a standard set of functional colors. Propose specific hex codes for: Success, Warning, Error, and Info.)
+
+### Typography
+
+#### Font Family (- Primary Font: Choose a clean, modern, highly-readable sans-serif font like Inter. Justify the choice.
+
+Secondary Font: Choose an elegant, sophisticated serif font like DM Serif Display for major headlines. Justify the choice.)
+#### Font Sizes (Create a full typographic scale. This must be detailed and precise, matching the sample's format. Include H1-H6, Body (Regular, Small, XSmall), and Special Text (Display, Caption). For each, provide the rem, px, and line-height values.)
+
+#### Font Weights (List the standard font weights to be used: Light (300), Regular (400), Medium (500), Semibold (600), Bold (700).)
+
+### UI Components
+
+#### 21st.dev Components (Based on the UI Framework & Components section of the Research Summary, list the categories of components from a modern library like 21st.dev that will be used. Examples: Navigation, Layout, Forms, Feedback, Data Display, Disclosure.)
+
+#### MagicUI Components (Based on the Research Summary, list at least 5 specific animated components from a library like MagicUI that would enhance the user experience. Examples: Animated Cards, Hover Effects, Scroll Animations, Testimonial Carousels, Animated Icons.)
+
+#### reactbits.dev Components (Based on the UI Framework & Components section of the Research Summary, list the categories of components from a modern library like reactbits.dev that will be used. Examples: Navigation, Layout, Forms, Feedback, Data Display, Disclosure.)
+
+#### Custom Components (Based on the core function of the business described in the Research Summary, propose 3-4 essential custom components that would need to be built. Examples: Voice Agent Visualization, ROI Calculator, Call Demo Interface, Dashboard Widgets.)
+
+### Micro-Interactions (Define 5-6 subtle animations for common UI events. Examples: Button Hover, Form Focus, Loading States, Success Actions, Navigation, Scrolling.)
+
+### Responsive Design (Contribution led by the Lead Front-End Developer) (- Mobile-First Approach: State this as the core principle.
+
+Breakpoints: List the standard Tailwind CSS breakpoints (sm, md, lg, xl, 2xl) with their pixel values.
+Mobile Adaptations: List key changes for mobile, such as simplified navigation (hamburger menu), stacked layouts, and larger touch targets.)
+### Accessibility (List key accessibility commitments. Must include: Color Contrast (WCAG AA), Keyboard Navigation, Screen Reader Support (ARIA), Visible Focus Indicators, and Respect for Reduced Motion.)
+
+### Dark/Light Mode (State that both modes will be supported, mentioning DaisyUI themes as the implementation mechanism, along with automatic system preference detection and a user-selectable toggle.)
+
+## Implementation Guidelines (Contribution led by the Lead Front-End Developer)
+
+### CSS Framework (List the frameworks mentioned in the Research Summary: Tailwind CSS, DaisyUI, and a placeholder for custom utilities.)
+
+### Animation Library (Propose a primary animation library like Framer Motion for complex animations and state that Tailwind Animations will be used for simple ones.)
+
+### Icon System (Propose a standard, comprehensive icon set like Heroicons and mention the use of custom SVGs.)
+
+### Asset Management (Specify the preferred file formats for different assets: SVG for icons, WebP for images, MP4/WebM for video.)
+
+### Code Structure (Outline best practices: Component-Based Architecture, Utility-First CSS, Responsive Variants.)
+
+## Design Tokens (As the Lead Front-End Developer, create a JSON object that codifies the design system's core values. Populate the JSON structure below using the values defined in the Color Palette, Typography, and common spacing/radius conventions. The structure must be exactly as follows.)
+
+{
+  "colors": {
+    "primary": {
+      // Populate with the extracted primary colors
+    },
+    "neutral": {
+      // Populate with the neutral colors
+    },
+    "functional": {
+      // Populate with the functional colors
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "primary": "Inter, sans-serif",
+      "secondary": "DM Serif Display, serif"
+    }
+  },
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem",
+    "3xl": "4rem"
+  },
+  "borderRadius": {
+    "sm": "0.125rem",
+    "md": "0.25rem",
+    "lg": "0.5rem",
+    "xl": "1rem",
+    "full": "9999px"
+  }
+}
+FINAL CHECK:
+
+Ensure the entire output is a single, clean markdown file. Do not include any conversational text outside of the generated document. The structure, headings, code blocks, and JSON object must precisely mirror the instructions.

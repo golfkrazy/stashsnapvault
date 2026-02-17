@@ -1,0 +1,104 @@
+I'll read all files in your docs/ folder to understand the business concept, brand, and landing page requirements.
+
+# Understanding of StashSnap
+
+Based on the documentation in your docs/ folder, here's what I understand:
+
+## Business Concept
+
+**StashSnap** is a discreet inventory app designed to solve a critical problem for older adults and their caregivers: memory lapses related to stashed items like passports, emergency cash, heirlooms, and important documents that are hidden around the home and later forgotten.
+
+### Core Problem
+- Older adults often put valuable items in "safe places" and then forget where they are
+- This creates emotional distress, time-consuming searches, and potential legal/financial problems
+- Caregivers (typically adult children) spend hours searching through homes, experiencing frustration, guilt, and exhaustion
+
+### Solution
+A simple mobile app ($0.99 price point) that allows users to:
+- Take photos of items and their hiding locations
+- Add descriptions and location details
+- Search and retrieve this information instantly when needed
+
+### Target Audience
+**Primary Avatar: Carol Peterson** (Problem-Aware Caregiver)
+- 54-year-old woman caring for aging mother
+- Part-time administrative assistant, married, middle-class ($75k household income)
+- Overwhelmed by caregiving duties while managing her own life
+- Experiences constant anxiety about lost items and their consequences
+- Values family, responsibility, financial prudence, and tradition
+
+## Brand Identity
+
+### Brand Essence
+- **Simplicity**: Easy to use, no learning curve
+- **Relief**: Provides peace of mind and reduces anxiety
+- **Control**: Empowers caregivers to manage chaos
+- **Compassion**: Understanding of the emotional burden
+- **Trust**: Reliable solution for critical needs
+
+### Brand Voice
+- **Tone**: Warm, reassuring, empathetic but professional
+- **Language**: Clear, jargon-free, emotionally intelligent
+- **Style**: Benefit-focused, addressing real pain points with genuine understanding
+
+### Brand Narrative
+StashSnap understands the invisible burden carried by caregivers of aging parents—the 2 AM anxiety, the frantic searches, the guilt. For less than a dollar, this simple app transforms chaos into control by creating a visual inventory of stashed items. It's not just about finding things; it's about reclaiming peace of mind and preserving the dignity of both caregiver and loved one.
+
+## Landing Page Requirements
+
+### Key Differences from PRD
+The PRD in your docs folder is for a **B2B SaaS platform** (AI-powered sales intelligence), which is **NOT** your product. Your actual product is **StashSnap** (B2C mobile app for caregivers). The landing page should focus on:
+
+### Recommended Landing Page Structure
+
+1. **Hero Section**
+   - Headline addressing emotional pain: "Finally, Remember Where Mom Put Everything"
+   - Subheadline: Peace of mind for 99 cents
+   - Visual: App screenshot showing simple interface with photo of item
+   - CTA: "Download Now" (iOS/Android)
+
+2. **Problem Section**
+   - Relatable scenarios from Carol's diary
+   - "The deed in the shoebox. The passport in the freezer. The cash in the National Geographic."
+   - Statistics on caregiver stress and time spent searching
+
+3. **Solution Section**
+   - Three-step process: Snap → Describe → Find
+   - Visual demonstration of app workflow
+   - Emphasis on simplicity (big + button, clear photos)
+
+4. **Emotional Transformation**
+   - Before/After narrative (based on Carol's diary entries)
+   - From anxiety and exhaustion to relief and control
+   - Testimonial-style story
+
+5. **Features**
+   - Photo documentation (location + close-up)
+   - Search functionality
+   - Simple categorization
+   - Privacy/security (local storage)
+
+6. **Trust Signals**
+   - AARP mention (from diary)
+   - Caregiver community endorsements
+   - Privacy assurance
+   - Money-back guarantee
+
+7. **Pricing**
+   - One-time $0.99 purchase
+   - No subscription, no hidden fees
+   - Comparison to cost of one coffee vs. hours of peace
+
+8. **Final CTA**
+   - "Give Yourself the Gift of Peace of Mind"
+   - App store buttons
+   - Risk-free messaging
+
+### Design Considerations
+- **Mobile-first**: Primary use case is on phones
+- **Large, clear typography**: Accessible for older users
+- **Warm, calming colors**: Not corporate/cold
+- **Real photos**: Not stock imagery—authentic scenarios
+- **Emotional connection**: Lead with empathy, not features
+
+The brand document template you have is excellent but needs to be populated with StashSnap-specific content rather than B2B SaaS content.

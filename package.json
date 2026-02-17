@@ -1,0 +1,44 @@
+{
+  "name": "stashsnap",
+  "author": "mmvergara",
+  "license": "MIT",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui"
+  },
+  "dependencies": {
+    "@stripe/stripe-js": "^8.7.0",
+    "@supabase/supabase-js": "^2.93.3",
+    "code-simplifier": "^1.2.1",
+    "react": "^19.0.0",
+    "react-country-state-city": "^1.1.12",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.1.2",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/ui": "^4.0.18",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.18",
+    "jsdom": "^28.1.0",
+    "shadcn": "^3.8.1",
+    "typescript": "^5.7.3",
+    "vite": "^6.2.6",
+    "vitest": "^4.0.18"
+  }
+}

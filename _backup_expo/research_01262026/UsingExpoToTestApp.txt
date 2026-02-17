@@ -1,0 +1,8 @@
+cd C:\aom_NewXPS\MDC_2025\CAI2300C\Windsurf_Projects\stashsnap\stashsnap
+npm install
+
+npx expo start
+
+
+Load safary on:
+ Metro waiting on exp://192.168.1.221:8081

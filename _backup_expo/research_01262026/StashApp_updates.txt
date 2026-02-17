@@ -1,0 +1,162 @@
+Absolutely, Ana-Ofelia — let’s build *StashSnap* from the ground up. Here's a **complete workflow** for creating the app, with a focus on your core requirements: photo capture, voice input, local storage, and strong privacy-first security.
+
+---
+
+## 🧭 StashSnap App Workflow Overview
+
+This workflow outlines the **user journey**, **technical components**, and **security architecture** for building StashSnap.
+
+---
+
+### 1. 📱 App Launch & Onboarding
+
+**Goal:** Introduce the app’s purpose and privacy-first philosophy.
+
+- **Splash Screen**: Logo + tagline (“Your memories, your vault”)
+- **Onboarding Slides**:
+  - What StashSnap does
+  - How it protects privacy
+  - How to use voice and photo capture
+- **Permissions Request**:
+  - Camera
+  - Microphone
+  - Local storage access
+- **Optional Setup**:
+  - Create passcode or biometric lock (Face ID / fingerprint)
+  - Choose default categories (e.g., Jewelry, Documents, Keepsakes)
+
+---
+
+### 2. 🧾 Home Screen / Dashboard
+
+**Goal:** Provide a clean, intuitive interface for managing inventory.
+
+- **Main Actions**:
+  - ➕ Add New Item
+  - 🔍 Search Items
+  - 📁 View Categories
+  - 🔐 Lock Vault
+- **Quick Stats**:
+  - Number of items
+  - Last added
+  - Reminders (if enabled)
+
+---
+
+### 3. 📸 Add New Item Workflow
+
+**Goal:** Let users discreetly capture and describe items.
+
+#### Step-by-step:
+
+1. **Take Photo**:
+   - Launch camera or choose from gallery
+   - Option to crop or retake
+
+2. **Voice Description**:
+   - Tap mic to record voice note
+   - Auto-transcribe to text (with option to edit)
+   - Save both audio and transcript locally
+
+3. **Categorize Item**:
+   - Choose or create category
+   - Add tags (e.g., “heirloom”, “insurance”)
+
+4. **Optional Fields**:
+   - Estimated value
+   - Location (e.g., “top drawer”, “safe”)
+   - Reminder (e.g., “review in 6 months”)
+
+5. **Save to Vault**:
+   - Encrypt and store locally
+   - Confirm success with subtle animation
+
+---
+
+### 4. 🔐 Security & Local Storage
+
+**Goal:** Ensure user data is stored securely and privately.
+
+#### Local Storage Architecture:
+
+- **Encrypted SQLite Database**:
+  - Stores item metadata, transcripts, and file paths
+- **Secure File Storage**:
+  - Photos and audio saved in encrypted local directories
+- **Encryption**:
+  - AES-256 for data at rest
+  - Optional end-to-end encryption for backups (if cloud sync is added later)
+
+#### Access Control:
+
+- **App Lock**:
+  - PIN, password, or biometric
+- **Session Timeout**:
+  - Auto-lock after inactivity
+- **No Cloud Sync by Default**:
+  - All data stays on device unless user opts in
+
+---
+
+### 5. 🗂 View & Manage Items
+
+**Goal:** Help users easily find and update their inventory.
+
+- **Category View**:
+  - Grid or list layout
+  - Thumbnail + title + tags
+- **Item Detail View**:
+  - Full photo
+  - Transcript + audio playback
+  - Edit or delete
+- **Search & Filter**:
+  - By keyword, category, tag, or date
+
+---
+
+### 6. 🔔 Reminders & Memory Joggers
+
+**Goal:** Support recall and organization over time.
+
+- **Optional Reminders**:
+  - Set review dates for items
+  - Push notification or in-app alert
+- **Memory Joggers**:
+  - “Did you mean…” suggestions based on tags
+  - Visual cues (e.g., color-coded categories)
+
+---
+
+### 7. ⚙️ Settings & Customization
+
+**Goal:** Empower users with control and personalization.
+
+- **Security Settings**:
+  - Change passcode
+  - Enable/disable biometric
+- **Category Management**:
+  - Add/edit/delete categories
+- **Storage Info**:
+  - View space used
+  - Option to export encrypted backup
+- **Accessibility**:
+  - Text size
+  - Voice playback speed
+
+---
+
+### 8. 🧪 Testing & Deployment
+
+**Goal:** Ensure reliability and privacy compliance.
+
+- **Testing**:
+  - Unit tests for encryption, storage, and UI
+  - Accessibility testing
+  - Voice transcription accuracy
+- **Deployment**:
+  - Android (via Play Store)
+  - iOS (via App Store)
+  - Optionally: F-Droid for privacy-conscious users
+
+---
+

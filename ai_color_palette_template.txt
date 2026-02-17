@@ -1,0 +1,27 @@
+Primary Colors
+
+Deep Navy Blue: #0B1023
+
+Rich Dark Blue: #0F1B3D
+
+Vibrant Electric Blue (accent glow): #256DFF
+
+Soft Cyan Highlight: #4BC3FF
+
+Secondary / Supporting
+
+Purple-Blue Glow: #6A6DFF
+
+Pink Accent (user avatars): #FF5C8D
+
+Golden Yellow Accent: #FFC24C
+
+Neutral
+
+Light Text: #E3E8F5
+
+Medium Text: #B4BDD9
+
+Border / UI Lines: #1C2340
+
+Card Background: #111A2E

@@ -1,0 +1,147 @@
+Project A = 
+### ✅ Phase 1 — Decide the destination & prep
+
+1. **Choose Project B as the destination**
+   - **Project A:** Auth + Stripe template  
+   - **Project B:** Main app (final integrated project)
+
+2. **Confirm both projects build independently**
+   - **Run:** `expo start` in each  
+   - Fix any obvious build errors first.
+
+---
+
+### ✅ Phase 2 — Normalize versions & tooling
+
+3. **Align core versions**
+   - **Match:**  
+     - Expo SDK  
+     - React Native  
+     - React  
+     - `expo-router`  
+     - `@supabase/supabase-js`  
+     - `stripe-react-native`
+
+4. **Align config tooling**
+   - Compare and plan to merge:  
+     - `tsconfig.json`  
+     - `babel.config.js`  
+     - `metro.config.js`  
+     - `eslint` config (if present)
+
+---
+
+### ✅ Phase 3 — Merge folder structures
+
+5. **Move authentication module (Project A → Project B)**
+   - Copy `app/auth/*` → `app/auth/*`  
+   - Copy `hooks/useUser.ts` → `hooks/useUser.ts`  
+   - Copy `stores/authStore.ts` → `stores/authStore.ts`  
+   - Move `supabase.ts` → `lib/supabase.ts` (or your chosen `lib/` path)
+
+6. **Move Stripe integration**
+   - Copy `lib/stripe.ts` → `lib/stripe.ts`  
+   - Copy `app/payments/*` → `app/payments/*`  
+   - Copy `hooks/useStripeCheckout.ts` → `hooks/useStripeCheckout.ts`
+
+7. **Move any shared utilities/components**
+   - Merge `components/` (buttons, inputs, etc.)  
+   - Merge any `lib/api.ts` or similar helpers.
+
+---
+
+### ✅ Phase 4 — Merge providers & root layout
+
+8. **Unify `app/_layout.tsx`**
+   - Ensure it wraps the app with (in this general order):
+     - `GestureHandlerRootView`
+     - `SafeAreaProvider`
+     - `StripeProvider`
+     - `SessionContextProvider` (Supabase)
+     - `ThemeProvider` (if you use one)
+     - `<Slot />`
+
+9. **Remove any old/duplicate layout logic**
+   - Make sure there is **one** root layout controlling providers.
+
+---
+
+### ✅ Phase 5 — Merge environment variables
+
+10. **Unify `.env` values**
+    - Combine keys from both projects:
+      - `EXPO_PUBLIC_SUPABASE_URL`  
+      - `EXPO_PUBLIC_SUPABASE_ANON_KEY`  
+      - `EXPO_PUBLIC_STRIPE_KEY`  
+      - Any OAuth / API URLs
+
+11. **Update env typing & usage**
+    - Update `expo-env.d.ts` (or equivalent)  
+    - Ensure `supabase.ts` and `stripe.ts` read from `process.env.EXPO_PUBLIC_*`.
+
+---
+
+### ✅ Phase 6 — Fix imports & paths
+
+12. **Rewrite imports to match new structure**
+    - Fix paths in:
+      - `auth` screens  
+      - `payments` screens  
+      - `hooks`  
+      - `stores`  
+      - `lib`  
+    - Make sure no file still points to the old project structure.
+
+13. **Clean up aliases / `tsconfig` paths**
+    - Ensure any `@/` or custom aliases resolve correctly in the merged project.
+
+---
+
+### ✅ Phase 7 — Validate flows end‑to‑end
+
+14. **Run the merged app**
+    - `expo start`  
+    - Optionally: `expo start --web`, `--android`, `--ios`
+
+15. **Test authentication flows**
+    - Signup  
+    - Login  
+    - Logout  
+    - Password reset (if present)  
+    - OAuth (if configured)
+
+16. **Test Stripe flows**
+    - Open checkout screen  
+    - Complete a test payment  
+    - Verify success screen and navigation
+
+17. **Test navigation integration**
+    - From auth → main app  
+    - From main app → payments  
+    - Back navigation and deep links (if any)
+
+---
+
+### ✅ Phase 8 — Cleanup & harden
+
+18. **Remove duplicates**
+    - Extra unused screens from template  
+    - Duplicate hooks or stores  
+    - Old `supabase.ts` / `stripe.ts` copies
+
+19. **Prune dependencies**
+    - Remove unused packages from `package.json`  
+    - Run `npm install` or `yarn` and ensure lockfile is clean.
+
+20. **Generate a final project map**
+    - Optionally create a `snaptree.txt` or README section showing:
+      - `app/` routes  
+      - `hooks/`, `lib/`, `stores/`, `components/`
+
+---
+
+If you want, next I can turn this into:
+
+- A **GitHub issue checklist** (with `- [ ]` items), or  
+- A **Notion‑ready checklist**, or  
+- A **“Claude Code script”** where each step is a separate instruction block you can run sequentially.

@@ -1,0 +1,16 @@
+Analyze entire codebase in C:\aom_NewXPS\ClaudeProjects\stashsnap and save results in C:\aom_NewXPS\ClaudeProjects\stashsnap\research\SnapStash_CheckList.md then
+reconcile any missing functionality from codebase when compared to the checklist. Create a comprehensive architectural diagram using Mermaid.js. of everything needed 
+to create from scratch a modern looking app that runs on any web browser and any mobile device. name the diagram file C:\aom_NewXPS\_MDC_2026\CAI3303_Projects\stashsnap\research\architecture.md and it should show:
+- All major components and their relationships
+- Data flow between frontend and backend elements
+- API endpoints and their purposes
+- State management approach
+- File structure hierarchy
+- Security
+- etc.
+
+Use this Mermaid style for the diagram:
+classDef default fill:#FFF8E1,stroke:#333,stroke-width:2px,color:#333;
+classDef primary fill:#00BFA5,stroke:#00897B,stroke-width:2px,color:#fff;
+classDef secondary fill:#FF7043,stroke:#E64A19,stroke-width:2px,color:#fff;
+classDef action fill:#FFC107,stroke:#FFA000,stroke-width:2px,color:#333;

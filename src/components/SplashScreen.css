@@ -1,0 +1,39 @@
+.splash-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0b1023;
+    /* Matching the splash background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s;
+    overflow: hidden;
+}
+
+.splash-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    animation: scale-in 1.5s ease-out forwards;
+}
+
+.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes scale-in {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

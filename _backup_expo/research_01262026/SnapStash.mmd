@@ -1,0 +1,100 @@
+graph TB
+    subgraph USER["👤 User Layer"]
+        LOGIN["🔐 Authentication Screen<br/>(NOT IMPLEMENTED)"]
+        HOME["🏠 Home Screen<br/>(Items List)"]
+        ADD["➕ Add Item Screen<br/>(Photo Capture)"]
+        SEARCH["🔍 Search Screen<br/>(PARTIAL)"]
+        SETTINGS["⚙️ Settings Screen<br/>(NOT IMPLEMENTED)"]
+        DETAIL["👁️ Item Detail Modal<br/>(Photo Viewer)"]
+    end
+
+    subgraph NAV["📱 Navigation Layer"]
+        ROUTER["Expo Router<br/>File-based routing"]
+        TABS["Bottom Tab Navigator<br/>(Home, Explore)"]
+        STACK["Stack Navigator<br/>(Modals)"]
+    end
+
+    subgraph UI["🎨 UI/Component Layer"]
+        THEMED["Themed Components<br/>(Text, View)"]
+        ICONS["Icon System<br/>(Vector Icons)"]
+        ANIM["Animations<br/>(Reanimated)"]
+        HAPTIC["Haptic Feedback<br/>(Vibration)"]
+    end
+
+    subgraph STATE["💾 State Management"]
+        COMPONENT["Component State<br/>(useState)"]
+        FOCUS["Focus Effects<br/>(useFocusEffect)"]
+        HOOKS["Custom Hooks<br/>(useThemeColor)"]
+    end
+
+    subgraph LOGIC["⚙️ Business Logic"]
+        ITEM_OPS["Item Operations<br/>(CRUD)"]
+        CATEGORY_OPS["Category Operations<br/>(CRUD)"]
+        FILTER_OPS["Filter/Search Logic<br/>(PARTIAL)"]
+        PHOTO_OPS["Photo Management<br/>(PARTIAL)"]
+    end
+
+    subgraph STORAGE["💾 Data Layer"]
+        ASYNC["AsyncStorage<br/>(Key-Value Store)<br/>SQLite: NOT IMPLEMENTED"]
+        FILESYSTEM["File System<br/>(Photo Storage)<br/>iCloud: NOT IMPLEMENTED"]
+        CACHE["Caching Layer<br/>(MISSING)"]
+    end
+
+    subgraph DEVICE["📲 Device APIs"]
+        CAMERA["📷 Camera API<br/>(expo-camera)"]
+        GALLERY["🖼️ Image Picker<br/>(expo-image-picker)"]
+        LOCATION["📍 Location API<br/>(NOT IMPLEMENTED)"]
+        BIOMETRIC["🔑 Biometric Auth<br/>(NOT IMPLEMENTED)"]
+        STORAGE_API["Device Storage<br/>(File System)"]
+    end
+
+    subgraph EXTERNAL["☁️ External Services (FUTURE)"]
+        CLOUD["Cloud Storage<br/>(iCloud/Google Cloud)<br/>NOT IMPLEMENTED"]
+        BACKUP["Backup Service<br/>NOT IMPLEMENTED"]
+        ANALYTICS["Analytics<br/>Google Analytics: PARTIAL"]
+        AUTH_SERVICE["Auth Service<br/>NOT IMPLEMENTED"]
+    end
+
+    classDef default fill:#FFF8E1,stroke:#333,stroke-width:2px,color:#333;
+    classDef primary fill:#00BFA5,stroke:#00897B,stroke-width:2px,color:#fff;
+    classDef secondary fill:#FF7043,stroke:#E64A19,stroke-width:2px,color:#fff;
+    classDef action fill:#FFC107,stroke:#FFA000,stroke-width:2px,color:#333;
+
+    class HOME,ADD,DETAIL primary
+    class LOGIN,SEARCH,SETTINGS secondary
+    class ROUTER,TABS,STACK action
+    class ASYNC,FILESYSTEM primary
+    class CAMERA,GALLERY,LOCATION action
+
+    LOGIN --> ROUTER
+    HOME --> TABS
+    ADD --> TABS
+    SEARCH --> TABS
+    SETTINGS --> ROUTER
+    DETAIL --> STACK
+
+    HOME --> STATE
+    ADD --> STATE
+    SEARCH --> STATE
+
+    HOME --> LOGIC
+    ADD --> LOGIC
+    SEARCH --> LOGIC
+
+    LOGIC --> STORAGE
+    STATE --> STORAGE
+
+    STORAGE --> DEVICE
+
+    DEVICE --> EXTERNAL
+
+    TABS --> ROUTER
+    STACK --> ROUTER
+
+    UI --> HOME
+    UI --> ADD
+    UI --> SEARCH
+    THEMED --> UI
+    ICONS --> UI
+    ANIM --> UI
+    HAPTIC --> UI

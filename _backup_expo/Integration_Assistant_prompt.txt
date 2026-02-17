@@ -1,0 +1,82 @@
+You are my integration assistant. You have access to two folders and their subfolders:
+
+1. The TEMPLATE folder is C:\aom_NewXPS\ClaudeProjects\E2E, which contains:
+   - architecture.md
+   - implementation_summary.md
+   - All source files for the Auth + Stripe template
+
+2. The TARGET PROJECT folder is  C:\aom_NewXPS\ClaudeProjects\stashsnap, which is the existing application I want to integrate into.
+
+Your job is to integrate the TEMPLATE’s authentication + Stripe functionality into the TARGET PROJECT, regardless of its structure, while preserving the TARGET PROJECT’s existing architecture and conventions.
+
+-------------------------------------
+### PART 1 — Understand the Template
+Read and analyze the following files from the TEMPLATE folder:
+
+- architecture.md
+- implementation_summary.md
+
+From these documents, extract:
+- The template’s architectural principles
+- Required providers and context layers
+- Required environment variables
+- Folder structure expectations
+- Routing/navigation assumptions
+- Required utilities, hooks, and shared components
+- Stripe integration flow
+- Authentication flow (signup, login, logout, session handling)
+
+Do NOT begin integration until you fully understand both the template’s and target's architecture.
+
+-------------------------------------
+### PART 2 — Understand the Target Project
+Analyze the TARGET PROJECT folder and determine:
+
+- Its routing/navigation system
+- Its provider hierarchy
+- Its environment variable system
+- Its folder structure and naming conventions
+- Its existing auth or payment logic (if any)
+- Any conflicts or overlaps with the template
+
+-------------------------------------
+### PART 3 — Perform Integration Using the Plan B Checklist
+You MUST follow this step-by-step integration framework:
+
+1. Normalize versions and tooling  
+2. Merge folder structures (auth, payments, hooks, lib, components)  
+3. Merge providers into a unified root layout  
+4. Merge environment variables and update typings  
+5. Rewrite imports and resolve path differences  
+6. Validate all flows end-to-end (auth, payments, navigation)  
+7. Cleanup duplicates, unused files, and unused dependencies  
+8. Generate a final project tree snapshot
+
+This checklist is mandatory.  
+Adapt folder names and paths to match the TARGET PROJECT’s conventions.
+
+-------------------------------------
+### PART 4 — Integration Rules
+- Never overwrite working code without showing a diff first.
+- When merging files, produce unified versions with comments explaining decisions.
+- Rewrite imports, paths, and router references automatically.
+- Preserve the TARGET PROJECT’s architecture unless the template requires otherwise.
+- Ensure environment variables are unified and typed.
+- Detect duplicate utilities and merge them cleanly.
+- After each major step, generate a project tree snapshot and save it in folder C:\aom_NewXPS\ClaudeProjects\stashsnap\integration_snapshots - use versioning in the file name starting with snapshot_v1.
+- If the TARGET PROJECT uses a different routing system (e.g., Expo Router, React Navigation, Next.js, custom), adapt the template accordingly.
+
+-------------------------------------
+### PART 5 — Output Requirements
+After completing analysis, produce:
+
+1. A high-level integration plan tailored to the TARGET PROJECT  
+2. A file-by-file merge plan  
+3. Diffs for every file you modify  
+4. A final integrated project tree  
+5. A summary of environment variables and provider hierarchy  
+6. A validation checklist for me to test the final app  
+
+-------------------------------------
+### Begin
+Start by confirming you can see both folders, then read architecture.md and implementation_summary.md from the TEMPLATE folder. Do not begin merging until analysis is complete.

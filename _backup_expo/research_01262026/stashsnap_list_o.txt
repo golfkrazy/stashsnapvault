@@ -1,0 +1,67 @@
+✅ Prototype Plan for StashSnap (Sketch)
+1. Login Screen
+
+Elements:
+
+Password input field
+Unlock button
+Optional logo or app name
+
+
+2. Home Screen
+Navigation Tabs: Home, Search, Settings
+Main Features:
+
+“Take a Photo” button (centered or floating)
+Metadata input fields:
+
+Description
+Tag
+Storage Location
+Notes
+Expiration/Renewal Date
+
+
+Preview image display
+
+
+3. Search Screen
+Filters:
+
+Tag
+Description
+Location
+Date (toggle on/off)
+
+
+Search Bar
+Results List:
+
+Scrollable cards with item photo + metadata
+
+
+4. Settings Screen
+Tabs: Storage | Profiles
+Storage Settings
+
+Local Storage:
+
+Toggle for saving to device library
+Option to save sample photo
+
+
+iCloud Storage:
+Placeholder section
+
+
+Vault Storage:
+
+Secure toggle
+“Clear All Items” button
+Delete trash button for item selected
+
+
+Profile Settings
+
+Setup screen
+Password management screen

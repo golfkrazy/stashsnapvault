@@ -1,0 +1,459 @@
+.profile-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 2rem;
+    background: var(--background);
+}
+
+.glass-card {
+    background: rgba(17, 26, 46, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 650px;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(37, 109, 255, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.avatar-section {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+}
+
+.avatar-placeholder,
+.avatar-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, var(--accent-electric-blue), var(--accent-cyan-highlight));
+    box-shadow: 0 0 20px rgba(37, 109, 255, 0.4);
+    text-transform: uppercase;
+}
+
+.upload-label {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background: var(--primary-rich-dark);
+    border: 1px solid var(--accent-cyan-highlight);
+    color: var(--accent-cyan-highlight);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.upload-label:hover {
+    background: var(--accent-electric-blue);
+    color: white;
+    box-shadow: 0 0 10px var(--accent-electric-blue);
+}
+
+.profile-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    color: var(--accent-cyan-highlight);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-medium);
+    margin-left: 0.2rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    background: rgba(11, 16, 35, 0.6);
+    border: 1px solid var(--border-ui);
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+/* Dropdown Menu styling - UNIFIED CONTAINER STYLES */
+.stdropdown-container {
+    border: 1px solid var(--border-ui) !important;
+    border-radius: 12px !important;
+    background: rgba(11, 16, 35, 0.6) !important;
+    /* The dark background goes here */
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.stdropdown-container:hover {
+    box-shadow: 0 4px 15px rgba(37, 109, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.stdropdown-input {
+    border: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+.stdropdown-input input {
+    background: transparent !important;
+    /* Transparent input */
+    /* No border on input */
+    border-radius: 12px !important;
+    padding: 0.8rem 1rem !important;
+    color: var(--text-light) !important;
+    box-shadow: none !important;
+    font-size: 0.95rem !important;
+    font-family: inherit !important;
+    width: 100% !important;
+    height: 46px !important;
+    cursor: pointer !important;
+}
+
+/* Specific styling for nested search/input box to match library 'double box' look */
+.stdropdown-input.stsearch-box input {
+    background: rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    margin: 4px 0 !important;
+    height: auto !important;
+    padding: 0.6rem 1rem !important;
+}
+
+.stdropdown-input input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Add focus state to container when input is focused */
+.stdropdown-container:focus-within {
+    border-color: var(--accent-electric-blue) !important;
+    box-shadow: 0 0 0 2px rgba(37, 109, 255, 0.2) !important;
+}
+
+/* Style standard select to match custom dropdowns */
+.form-group select {
+    background: linear-gradient(135deg, var(--accent-electric-blue), var(--accent-cyan-highlight)) !important;
+    border: none !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(37, 109, 255, 0.3) !important;
+    cursor: pointer;
+    appearance: none;
+    /* Remove default arrow to style consistently if needed, but for now just bg */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 1rem center !important;
+    background-size: 1em !important;
+}
+
+.form-group select:focus {
+    box-shadow: 0 0 0 2px rgba(37, 109, 255, 0.2) !important;
+    outline: none;
+}
+
+.form-group select option {
+    background-color: #0b1023 !important;
+    color: white !important;
+    padding: 10px;
+}
+
+.stdropdown-menu {
+    background: linear-gradient(135deg, var(--accent-electric-blue), var(--accent-cyan-highlight)) !important;
+    border: 1px solid var(--accent-cyan-highlight) !important;
+    border-radius: 12px !important;
+    overflow-y: auto !important;
+    /* Enable scrolling */
+    max-height: 250px !important;
+    /* Limit height */
+    margin-top: 5px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    z-index: 1000 !important;
+}
+
+/* Scrollbar styling for dropdown */
+.stdropdown-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.stdropdown-menu::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.stdropdown-menu::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.stdropdown-item {
+    color: white !important;
+    padding: 10px 15px !important;
+    transition: background 0.2s ease;
+    background: transparent !important;
+}
+
+.stdropdown-item:hover,
+.stdropdown-item.selected {
+    background: rgba(255, 255, 255, 0.2) !important;
+    cursor: pointer;
+}
+
+/* Search box inside dropdown */
+.stsearch-box input {
+    background: rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    border-radius: 8px !important;
+    margin-bottom: 5px !important;
+}
+
+.stsearch-box {
+    background: transparent !important;
+    padding: 10px !important;
+}
+
+.readonly-input {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, 0.2) !important;
+}
+
+
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    /* Center buttons as requested */
+    gap: 1.5rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.btn {
+    padding: 0.8rem 2.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1rem;
+    min-width: 140px;
+    text-align: center;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, var(--accent-electric-blue), var(--accent-cyan-highlight));
+    color: white;
+    box-shadow: 0 4px 15px rgba(37, 109, 255, 0.3);
+}
+
+.btn.primary:hover {
+    box-shadow: 0 6px 20px rgba(37, 109, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ff4d4d;
+    /* Red text */
+    border: 1px solid rgba(255, 77, 77, 0.3);
+    /* Red border */
+}
+
+.btn.secondary:hover {
+    background: rgba(255, 77, 77, 0.1);
+    border-color: #ff4d4d;
+    transform: translateY(-2px);
+}
+
+/* Force all dropdown arrows to be white */
+.stdropdown-tool svg path {
+    fill: white !important;
+}
+
+
+.btn.primary:hover {
+    box-shadow: 0 6px 20px rgba(37, 109, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ff4d4d;
+    /* Red text for Cancel */
+    border: 1px solid rgba(255, 77, 77, 0.3);
+    /* Red border */
+}
+
+.btn.secondary:hover {
+    background: rgba(255, 77, 77, 0.1);
+    border-color: #ff4d4d;
+    transform: translateY(-2px);
+}
+
+/* Force all dropdown arrows to be white */
+.stdropdown-tool svg path {
+    fill: white !important;
+}
+
+
+
+.primary {
+    background: var(--accent-electric-blue);
+    color: white;
+    box-shadow: 0 4px 15px rgba(37, 109, 255, 0.3);
+}
+
+.primary:hover:not(:disabled) {
+    background: var(--accent-cyan-highlight);
+    color: var(--primary-deep-navy);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(75, 195, 255, 0.4);
+}
+
+.secondary {
+    background: transparent;
+    border: 1px solid var(--border-ui);
+    color: var(--text-medium);
+}
+
+.secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-light);
+    border-color: var(--text-medium);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.profile-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    gap: 1rem;
+    color: var(--text-medium);
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(37, 109, 255, 0.1);
+    border-top-color: var(--accent-electric-blue);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Footer Styles */
+.brand-footer {
+    border-top: 1px solid var(--border-ui);
+    padding: 2rem 0;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-motto {
+    font-size: 0.85rem;
+    color: var(--accent-cyan-highlight);
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.footer-links p {
+    font-size: 0.8rem;
+    color: var(--text-medium);
+    opacity: 0.6;
+}

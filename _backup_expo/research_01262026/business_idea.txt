@@ -1,0 +1,8 @@
+StashSnap is a privacy-first inventory app designed to help older adults discreetly 
+track hidden valuables and important documents. It emphasizes intuitive design 
+and memory joggers to support recall, while safeguarding sensitive information 
+through secure, user-controlled access. The app features a clean interface, 
+customizable categories, and optional reminders, all tailored to empower 
+users with clarity and control. Its thoughtful UX reflects Anaofelia’s 
+commitment to resilience, transparency, and celebration of progress — 
+making it not just a tool, but a trusted companion for personal organization.
