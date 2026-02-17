@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@stripe/stripe-js": "^8.7.0",
-    "@supabase/supabase-js": "^2.93.3",
+    "@supabase/supabase-js": "^2.96.0",
     "code-simplifier": "^1.2.1",
     "react": "^19.0.0",
     "react-country-state-city": "^1.1.12",
