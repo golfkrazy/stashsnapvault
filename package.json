@@ -17,7 +17,7 @@
     "@stripe/stripe-js": "^8.7.0",
     "@supabase/supabase-js": "^2.93.3",
     "code-simplifier": "^1.2.1",
-    "react": "^19.0.0",
+    "react": "^19.2.4",
     "react-country-state-city": "^1.1.12",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.2"
@@ -26,7 +26,7 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
-    "@types/react": "^19.0.7",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "^19.1.2",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
