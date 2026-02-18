@@ -21,12 +21,12 @@ export async function performSemanticSearch(
     _options: SearchOptions
 ): Promise<SearchResult[]> {
     try {
-        console.log(`[Semantic Search] Searching for: "${query}" (${options.searchType})`);
+        console.log(`[Semantic Search] Searching for: "${_query}" (${_options.searchType})`);
 
         // 1. Generate Embedding for the query using Edge Function (Nomic v1.5)
         const { data: embeddingData, error: embeddingError } = await supabase.functions.invoke('generate-embedding', {
             body: {
-                text: query,
+                text: _query,
                 task: 'search_query'
             }
         });
@@ -41,8 +41,8 @@ export async function performSemanticSearch(
         // 2. Call RPC to find matching items
         const { data: matchData, error: matchError } = await supabase.rpc('match_items', {
             query_embedding: queryEmbedding,
-            match_threshold: options.threshold || 0.5, // Default threshold
-            match_count: options.limit || 10
+            match_threshold: _options.threshold || 0.5, // Default threshold
+            match_count: _options.limit || 10
         });
 
         if (matchError) {
