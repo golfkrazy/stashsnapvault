@@ -18,15 +18,28 @@
 
 ---
 
-## 🚀 Immediate Action Plan (Commander & Pricing Polish)
- 
-### 1. Commander Dashboard Expansion
-- [ ] **Screen:** Implement `SubscriptionManagement.tsx` for tracking renewals.
-- [ ] **Logic:** Implement RED highlighting for renewal dates < 7 days.
+---
 
-### 2. Monetization Expansion
-- [ ] **Storage Fee:** Implement \$9.99 one-time grace fee for canceled premium users.
-- [ ] **Renewal Incentive:** Loyalty 15% discount logic for 6-month subscribers.
+## 🚀 Priority Roadmap (Next Phase)
+
+### 1. Growth & Retention "API-First" Layer
+*Goal: Build reusable services for growth that can be ported to any application.*
+- [ ] **Billing Service (`BillingService.ts`)**: Implement the 24-hour "No-Stress" Cancellation logic with automated Stripe refunds.
+- [ ] **Growth Service (`GrowthService.ts`)**: Implement social multi-channel invites (Email, WhatsApp, Socials) via Web Share API.
+- [ ] **Social Proof Engine**: Implement omni-platform review posting (X, Facebook, Instagram) via Intent URLs.
+
+### 2. Phase 6: Local-First Resilience (Dexie.js)
+*Goal: Ensure the vault stays open even when the network is closed.*
+- [ ] **Dexie.js Integration**: Install and configure IndexedDB for offline persistence.
+- [ ] **Sync Service (`SyncService.ts`)**: Create reconciliation logic between IndexedDB and Supabase.
+
+### 3. Core Utility & "Snap" Resilience
+- [ ] **Trash & Recovery**: Implement soft-delete (Trash Bin) functionality to prevent accidental data loss.
+- [ ] **Bulk Operations**: Enable multi-select and bulk-edit for efficient vault management.
+- [ ] **Downgrade Flow**: Implement the \$9.99 grace fee for canceled premium users to maintain vault integrity.
+
+### 4. Monetization & Incentives
+- [ ] **Renewal Incentive**: Loyalty 15% discount logic for 6-month subscribers to boost LTV.
 
 ---
 

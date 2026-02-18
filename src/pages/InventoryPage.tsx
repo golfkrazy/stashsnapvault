@@ -7,7 +7,7 @@ import VaultItemCard from '../components/VaultItemCard';
 import VaultStats from '../components/VaultStats';
 import SearchComponent from '../components/SearchComponent';
 import { performSemanticSearch, SearchType } from '../services/semanticSearch';
-
+import { trashService } from '../services/trashService';
 import { BrandHeader, BrandFooter } from '../components/BrandComponents';
 
 const InventoryPage: React.FC = () => {
@@ -27,6 +27,7 @@ const InventoryPage: React.FC = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const [showPremiumCelebration, setShowPremiumCelebration] = useState(false);
     const [hasDefaultedSemantic, setHasDefaultedSemantic] = useState(false);
+    const [selectedItems, setSelectedItems] = useState<string[]>([]);
     const { refreshProfile } = useSession();
 
     // Set AI Semantic as default for Premium/Admin users on first load
@@ -50,6 +51,7 @@ const InventoryPage: React.FC = () => {
                     .from('items')
                     .select('*, category:categories(*)')
                     .eq('user_id', session.user.id)
+                    .is('deleted_at', null)
                     .order('created_at', { ascending: false });
 
                 if (itemsError) throw itemsError;
@@ -138,6 +140,31 @@ const InventoryPage: React.FC = () => {
         }
     }, [session?.user.id, items]);
 
+    const handleSelectItem = (id: string, isSelected: boolean) => {
+        setSelectedItems(prev =>
+            isSelected ? [...prev, id] : prev.filter(itemId => itemId !== id)
+        );
+    };
+
+    const handleBulkTrash = async () => {
+        if (selectedItems.length === 0) return;
+        if (!window.confirm(`Move ${selectedItems.length} items to Trash?`)) return;
+
+        setLoading(true);
+        try {
+            await Promise.all(selectedItems.map(id => trashService.moveToTrash(id)));
+            // Refresh items list
+            setItems(prev => prev.filter(item => !selectedItems.includes(item.id)));
+            setSelectedItems([]);
+            alert(`${selectedItems.length} items moved to trash.`);
+        } catch (error) {
+            console.error('Error in bulk trash:', error);
+            alert('Failed to delete some items.');
+        } finally {
+            setLoading(false);
+        }
+    };
+
 
     // Filter Logic: Category AND Search
     const displayItems = (searchResults || items).filter(item => {
@@ -193,6 +220,23 @@ const InventoryPage: React.FC = () => {
                                 ✨ Upgrade
                             </Link>
                         )}
+                        <Link
+                            to="/inventory/trash"
+                            style={{
+                                color: 'var(--text-medium)',
+                                textDecoration: 'none',
+                                fontSize: '0.9rem',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.4rem',
+                                padding: '0.6em 1.2em',
+                                background: 'rgba(255,255,255,0.05)',
+                                borderRadius: '8px',
+                                border: '1px solid var(--glass-border)'
+                            }}
+                        >
+                            🗑️ Trash
+                        </Link>
                         <Link
                             to="/inventory/add"
                             className="btn"
@@ -308,16 +352,73 @@ const InventoryPage: React.FC = () => {
                                 )}
                             </div>
                         ) : (
-                            displayItems.map(item => (
-                                <VaultItemCard
-                                    key={item.id}
-                                    item={item}
-                                    onDelete={(id) => setItems(prev => prev.filter(i => i.id !== id))}
-                                />
-                            ))
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.5rem' }}>
+                                {displayItems.map(item => (
+                                    <VaultItemCard
+                                        key={item.id}
+                                        item={item}
+                                        onDelete={() => setItems(prev => prev.filter(i => i.id !== item.id))}
+                                        selected={selectedItems.includes(item.id)}
+                                        onSelect={handleSelectItem}
+                                    />
+                                ))}
+                            </div>
                         )}
                     </div>
                 </div>
+
+                {/* Bulk Actions Toolbar */}
+                {selectedItems.length > 0 && (
+                    <div style={{
+                        position: 'fixed',
+                        bottom: '2rem',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        background: 'var(--primary-rich-dark)',
+                        border: '1px solid var(--accent-cyan-highlight)',
+                        padding: '1rem 2rem',
+                        borderRadius: '16px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '2rem',
+                        boxShadow: '0 10px 30px rgba(0,0,0,0.8)',
+                        zIndex: 100,
+                        animation: 'slideUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)'
+                    }}>
+                        <div style={{ color: 'var(--text-light)', fontWeight: 'bold' }}>
+                            📑 {selectedItems.length} items selected
+                        </div>
+                        <div style={{ display: 'flex', gap: '1rem' }}>
+                            <button
+                                onClick={() => setSelectedItems([])}
+                                style={{ background: 'transparent', border: 'none', color: 'var(--text-medium)', cursor: 'pointer' }}
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                onClick={handleBulkTrash}
+                                style={{
+                                    background: 'rgba(239, 68, 68, 0.2)',
+                                    color: 'var(--accent-pink)',
+                                    border: '1px solid var(--accent-pink)',
+                                    padding: '0.5rem 1rem',
+                                    borderRadius: '8px',
+                                    cursor: 'pointer',
+                                    fontWeight: 'bold'
+                                }}
+                            >
+                                🗑️ Move to Trash
+                            </button>
+                        </div>
+                    </div>
+                )}
+
+                <style>{`
+                    @keyframes slideUp {
+                        from { transform: translate(-50%, 100px); opacity: 0; }
+                        to { transform: translate(-50%, 0); opacity: 1; }
+                    }
+                `}</style>
 
                 <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem' }}>
                     <Link to="/" className="home-link">🏠 Vault Home</Link>

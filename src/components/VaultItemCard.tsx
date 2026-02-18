@@ -1,48 +1,38 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import supabase from '../supabase';
 import { VaultItem } from '../supabase/types';
+import { trashService } from '../services/trashService';
 
 interface VaultItemCardProps {
     item: VaultItem;
     onDelete?: (id: string) => void;
+    selected?: boolean;
+    onSelect?: (id: string, isSelected: boolean) => void;
 }
 
-const VaultItemCard: React.FC<VaultItemCardProps> = ({ item, onDelete }) => {
+const VaultItemCard: React.FC<VaultItemCardProps> = ({ item, onDelete, selected, onSelect }) => {
     const navigate = useNavigate();
     const [isDeleting, setIsDeleting] = React.useState(false);
 
+    const handleSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+        e.stopPropagation();
+        if (onSelect) onSelect(item.id, e.target.checked);
+    };
+
     const handleDelete = async (e: React.MouseEvent) => {
         e.stopPropagation();
-        if (!window.confirm(`Are you sure you want to delete "${item.title}"?`)) return;
+        if (!window.confirm(`Are you sure you want to move "${item.title}" to Trash? (Item will be recoverable for 30 days)`)) return;
 
         setIsDeleting(true);
         try {
-            // 1. Delete photo from storage if it exists
-            if (item.photo_path) {
-                const { error: storageError } = await supabase.storage
-                    .from('item-photos')
-                    .remove([item.photo_path]);
+            // Soft Delete using Trash Service
+            await trashService.moveToTrash(item.id);
 
-                if (storageError) {
-                    console.warn('Could not delete storage file:', storageError);
-                    // We continue anyway so the DB entry is still removed
-                }
-            }
-
-            // 2. Delete item from database
-            const { error } = await supabase
-                .from('items')
-                .delete()
-                .eq('id', item.id);
-
-            if (error) throw error;
-
-            // 3. Notify parent to refresh UI
+            // Notify parent to refresh UI
             if (onDelete) onDelete(item.id);
         } catch (error) {
-            console.error('Error deleting item:', error);
-            alert('Failed to delete item.');
+            console.error('Error moving item to trash:', error);
+            alert('Failed to move item to trash.');
         } finally {
             setIsDeleting(false);
         }
@@ -75,6 +65,30 @@ const VaultItemCard: React.FC<VaultItemCardProps> = ({ item, onDelete }) => {
                 overflow: 'hidden',
                 background: 'rgba(0,0,0,0.2)'
             }}>
+                {/* Selection Checkbox Overlay */}
+                <div style={{
+                    position: 'absolute',
+                    top: '8px',
+                    left: '8px',
+                    zIndex: 20,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                }}>
+                    <input
+                        type="checkbox"
+                        checked={selected}
+                        onChange={handleSelect}
+                        onClick={(e) => e.stopPropagation()}
+                        style={{
+                            width: '20px',
+                            height: '20px',
+                            cursor: 'pointer',
+                            accentColor: 'var(--accent-cyan-highlight)'
+                        }}
+                    />
+                </div>
+
                 {item.photo_url ? (
                     <>
                         <img

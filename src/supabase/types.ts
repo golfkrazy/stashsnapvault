@@ -30,6 +30,8 @@ export interface Item {
   jurisdiction_country?: string | null;
   created_at: string;
   updated_at: string;
+  deleted_at?: string | null;
+  trash_expires_at?: string | null;
 
   // Optional related data
   category?: Category;

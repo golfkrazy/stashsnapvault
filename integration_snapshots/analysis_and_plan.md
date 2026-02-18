@@ -37,11 +37,12 @@ The E2E template is a **React web application** built with:
    - Protected routes: `/protected` (requires session)
    - 404 fallback for unauthorized access
 
-#### Required Environment Variables
-
+###  Required Environment Variables
+###  if using Netlify you must create them there
 ```env
 VITE_SUPABASE_URL=<your-supabase-url>
 VITE_SUPABASE_ANON_KEY=<your-anon-key>
+VITE_STRIPE_PUBLISHABLE_KEY=<your-stripe-publishable-key>
 ```
 
 #### Folder Structure

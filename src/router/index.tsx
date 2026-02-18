@@ -13,6 +13,7 @@ import Providers from "../Providers.tsx";
 import InventoryPage from "../pages/InventoryPage.tsx";
 import AddItemPage from "../pages/AddItemPage.tsx";
 import EditItemPage from "../pages/EditItemPage.tsx";
+import TrashBinPage from "../pages/TrashBinPage.tsx";
 import AdminDashboard from "../pages/AdminDashboard.tsx";
 import UserManagement from "../pages/UserManagement.tsx";
 import SubscriptionManagement from "../pages/SubscriptionManagement.tsx";
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
           {
             path: "/inventory/edit/:id",
             element: <EditItemPage />,
+          },
+          {
+            path: "/inventory/trash",
+            element: <TrashBinPage />,
           },
         ],
       },

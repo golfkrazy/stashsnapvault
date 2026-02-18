@@ -1,6 +1,6 @@
 # StashSnap - Comprehensive Feature Checklist & Analysis
 
-**Updated:** February 13, 2026 (Restored)
+**Updated:** February 18, 2026 (Modern State Sync)
 **Project Type:** React Web App (Vite + Supabase)  
 **Target Platform:** Web (Desktop & Mobile Responsive)
 
@@ -149,11 +149,11 @@ StashSnap is a personal inventory management application designed to help caregi
 - [ ] Filter by category
 - [ ] Filter by value range
 - [ ] Filter by date added
-- [ ] Sort options (date, value, name)
+- [x] Sort options (date, value, name)
 - [ ] Search history
 - [ ] Recent searches
 - [ ] Search suggestions
-- [ ] Filter by Expiration / **RED items** (Guardian Logic)
+- [x] Filter by Expiration / **RED items** (Guardian Logic)
 - [x] **Tiered Accessibility**: Gated AI for Premium users
 - [x] **Premium Shine**: High-end visual indicator for Paid tiers
 
@@ -188,6 +188,7 @@ StashSnap is a personal inventory management application designed to help caregi
 - [ ] Share items with family members
 - [ ] Shared inventories
 - [ ] Permission management
+- [ ] **Social Multi-Channel Invites**: Email, WhatsApp, and Social Media sharing via Unified Growth API
 - [ ] Activity log
 - [ ] Notifications for shared items
 - [ ] Comments on items
@@ -198,6 +199,7 @@ StashSnap is a personal inventory management application designed to help caregi
 - [x] Marketing website
 - [ ] Feature showcase
 - [ ] Pricing page
+- [ ] **Omni-platform Social Reviews**: Integrated review/testimonial posting to X, Facebook, and Instagram
 - [ ] Demo video
 - [ ] Customer testimonials
 - [ ] ROI calculator
@@ -243,6 +245,8 @@ StashSnap is a personal inventory management application designed to help caregi
 - [x] **Tier Enforcement** (10-item limit for Free)
 - [x] **Upgrade flow** (Celebration modal complete)
 - [x] **Payment history** (via Stripe sync)
+- [ ] **24-Hour "No-Stress" Cancellation**: Automated full refund window (Caregiver-First Policy)
+- [ ] **Refund/Credit Logic**: API-driven handling for pro-rated credits or full reversals
 - [ ] Free trial management
 - [ ] Usage-based billing
 - [ ] Downgrade flow (Storage Grace Fee pending)
@@ -303,9 +307,9 @@ StashSnap is a personal inventory management application designed to help caregi
 - **State Management:** React Hooks + Context API
 - **Storage:** Supabase Auth- ✅ **Requirement 8:** Academic Write-Up Mapping generated
 - [x] **Phase 11: Expiration Alert System** (Card visibility & highlighting)
-- 📋 **Phase 12: Final Deployment** (Submission Prep)
-- ✅ **Phase 13: Stripe Monetization** (Sync logic, limits, and setup guide completed)
-- 🚧 **Phase 14: Commander Dashboard** (Subscription tracking pending)
+- [x] **Phase 12: Final Deployment** (Submission Prep)
+- [x] **Phase 13: Stripe Monetization** (Sync logic, limits, and setup guide completed)
+- [x] **Phase 14: Commander Dashboard** (Subscription tracking active)
 
 ### 🧪 Submission Test Accounts
 - **Account 1 (Admin):** `elee@mdc.edu` / `drlee`

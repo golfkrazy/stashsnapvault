@@ -8,14 +8,14 @@
 
 ### 🛡️ Documentation Maintenance Protocol
 To prevent documentation drift, the following files **must** be updated at the end of every significant task or session:
-1.  **[StashSnapVault_CheckList.md](file:///c:/aom_NewXPS/ClaudeProjects/stashsnap/integration_snapshots/StashSnapVault_CheckList.md)**: Mark specific features/tasks as ✅ or 🚧.
-2.  **[INTEGRATION_SUMMARY.md](file:///c:/aom_NewXPS/ClaudeProjects/stashsnap/integration_snapshots/INTEGRATION_SUMMARY.md)**: Update the "⏳ PENDING TASKS" and "✅ COMPLETED" lists.
-3.  **[NEXT_STEPS.md](file:///c:/aom_NewXPS/ClaudeProjects/stashsnap/NEXT_STEPS.md)**: Refine the technical roadmap for the immediate next phase.
-4.  **[NEXT_SESSION_BRIEF.md](file:///c:/aom_NewXPS/ClaudeProjects/stashsnap/NEXT_SESSION_BRIEF.md)**: Summarize the current session's "WOW" moments and blockers.
-5.  **[academic_project_documentation.md](file:///c:/aom_NewXPS/ClaudeProjects/stashsnap/integration_snapshots/academic_project_documentation.md)**: Update the "Requirement Gap Analysis" for Dr. Lee.
-6.  **[AI_Mastery_Guide.md](file:///c:/aom_NewXPS/ClaudeProjects/stashsnap/integration_snapshots/AI_Mastery_Guide.md)**: Ensure AI features and instructions match implementation.
-7.  **[SUPABASE_SETUP_GUIDE.md](file:///c:/aom_NewXPS/ClaudeProjects/stashsnap/SUPABASE_SETUP_GUIDE.md)**: Verify environment variables and secrets are current.
-8.  **[vitest_setup.md](C:\aom_NewXPS\ClaudeProjects\stashsnap\integration_snapshots\vitest_setup.md)
+1.  **[StashSnapVault_CheckList.md](file:///c:/aom_NewXPS/ClaudeProjects/stashsnapvault/integration_snapshots/StashSnapVault_CheckList.md)**: Mark specific features/tasks as ✅ or 🚧.
+2.  **[INTEGRATION_SUMMARY.md](file:///c:/aom_NewXPS/ClaudeProjects/stashsnapvault/integration_snapshots/INTEGRATION_SUMMARY.md)**: Update the "⏳ PENDING TASKS" and "✅ COMPLETED" lists.
+3.  **[NEXT_STEPS.md](file:///c:/aom_NewXPS/ClaudeProjects/stashsnapvault/NEXT_STEPS.md)**: Refine the technical roadmap for the immediate next phase.
+4.  **[NEXT_SESSION_BRIEF.md](file:///c:/aom_NewXPS/ClaudeProjects/stashsnapvault/NEXT_SESSION_BRIEF.md)**: Summarize the current session's "WOW" moments and blockers.
+5.  **[academic_project_documentation.md](file:///c:/aom_NewXPS/ClaudeProjects/stashsnapvault/integration_snapshots/academic_project_documentation.md)**: Update the "Requirement Gap Analysis" for Dr. Lee.
+6.  **[AI_Mastery_Guide.md](file:///c:/aom_NewXPS/ClaudeProjects/stashsnapvault/integration_snapshots/AI_Mastery_Guide.md)**: Ensure AI features and instructions match implementation.
+7.  **[SUPABASE_SETUP_GUIDE.md](file:///c:/aom_NewXPS/ClaudeProjects/stashsnapvault/SUPABASE_SETUP_GUIDE.md)**: Verify environment variables and secrets are current.
+8.  **[vitest_setup.md](file:///c:/aom_NewXPS/ClaudeProjects/stashsnapvault/integration_snapshots/vitest_setup.md)**: Verify environment variables and secrets are curren - for now TEST keys
 
 > [!NOTE]
 > The AI agent maintains an internal `task.md` (visible in artifacts) to track item-level progress in real-time before syncing to these permanent project documents.
