@@ -291,6 +291,7 @@ Deploy the following functions using Supabase CLI:
 | 8 | Advanced Admin & RBAC Fixes | ✓ Complete |
 | 9 | Edge Function Deployment | 🚧 Partial |
 | 10 | Backend Restoration (Step #2) | ⏳ Next |
+| 11 | Email & Security Customization | ⏳ New |
 
 ## Step 10: Backend Restoration & Stripe (Step #2)
 
@@ -340,6 +341,45 @@ If you see an error saying `Bucket not found` when trying to upload a photo:
 
 ### Q: Where do I find my project credentials later?
 **A:** Supabase Dashboard → **Settings** → **API** (for URL and Anon Key) or **Authentication** → **Providers** → **Google** (for OAuth credentials)
+
+## Step 11: Email & Security Customization (CRITICAL UX)
+
+To reduce "scary" warnings in Gmail and ensure links don't expire too quickly, follow these steps:
+
+### 11.1 Adjust Email Expiration (OTP Expiry)
+
+1. Go to **Authentication** (sidebar lock icon)
+2. Look for the **Configuration** section in the submenu
+3. Click **Auth Settings**
+4. Scroll down to **Security and Protection**
+5. Find **Email link expiration** (default is 3600 seconds/1 hour)
+6. Change to at least **600 seconds** (10 minutes) or your preferred window.
+7. Click **SAVE**
+
+### 11.2 Professionalize Email Templates
+
+Gmail often flags generic Supabase emails as "dangerous" if the subject is cold and the body is minimal.
+
+1. Go to **Authentication** → **Email Templates**
+2. Select **Confirm Signup** or **Reset Password**
+3. **Customize your Subject:**
+   - Instead of "Confirm your signup", use: `✨ Welcome to StashSnap Vault - Confirm Your Secure Account`
+   - Instead of "Reset Your Password", use: `🔐 Reset Your StashSnap Vault Password`
+4. **Customize your Message Body:**
+   - Use a professional, warm tone.
+   - Mention the expiry: *"This link is valid for 5 minutes for your security."*
+   - Example Template (Copy-Paste):
+   ```html
+   <h2>Welcome to StashSnap Vault!</h2>
+   <p>You requested to confirm your account. Please click the button below to secure your vault:</p>
+   <a href="{{ .ConfirmationURL }}" style="background:#22d3ee; color:#000; padding:10px 20px; text-decoration:none; border-radius:5px; font-weight:bold;">Secure My Vault</a>
+   <p>This secure link is single-use and will expire in 5 minutes.</p>
+   <p>If you didn't request this, you can safely ignore this email.</p>
+   ```
+5. Click **SAVE** for each template edited.
+
+> [!TIP]
+> **Gmail Warning Mitigation:** If you see a "This message might be dangerous" banner, click **"Looks safe"**. This trains Gmail's algorithm that your new sender domain (`no-reply@anaofeliamt.ai`) is trustworthy. The warning usually disappears after a few users perform this action.
 
 ---
 
