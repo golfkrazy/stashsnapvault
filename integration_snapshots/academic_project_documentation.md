@@ -1,6 +1,6 @@
 # Academic Project Documentation - Dr. Lee Requirement Gap Analysis
 
-**Date:** February 16, 2026
+**Date:** February 18, 2026
 **Project:** StashSnap Vault (Web-First Pivot)
 **Status:** Phase 1-14 Core Logic & Monetization Complete
 
@@ -39,6 +39,10 @@ This document tracks the alignment between the original project requirements (fr
 - **Status:** ✅ COMPLETED
 - **Implementation:** Configured via `.mcp.json` with Supabase and shadcn servers for rapid orchestration.
 
+### 7. Trash & Recovery (Utility Requirement)
+- **Status:** ✅ COMPLETED
+- **Implementation:** Implemented a full Soft-Delete lifecycle (`deleted_at` + `trash_expires_at`) with 30-day automated expiration logic and a dedicated management view for restored items.
+
 ---
 
 ## 🏗️ Technical Evaluation & Architecture
@@ -69,6 +73,7 @@ graph TD
 | RBAC | ✅ | Verified via Commander Ledger |
 | AI Search | ✅ | Tiered Gating operational |
 | Monetization| ✅ | Stripe Webhooks synchronized |
+| Trash/Bulk | ✅ | Utility Lifecycle implemented |
 | Alerts | 🚧 | Backend scanner pending |
 | Sync | 🚧 | Dexie.js re-integration in Phase 06 |
 

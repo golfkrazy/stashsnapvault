@@ -1,6 +1,6 @@
 # StashSnap - Comprehensive Feature Checklist & Analysis
 
-**Updated:** February 18, 2026 (Modern State Sync)
+**Updated:** February 18, 2026 (Modern State Sync - Trash & Bulk Ops Live)
 **Project Type:** React Web App (Vite + Supabase)  
 **Target Platform:** Web (Desktop & Mobile Responsive)
 
@@ -19,10 +19,7 @@ StashSnap is a personal inventory management application designed to help caregi
 - ✅ **Phase 09: Branding & Landing Page**
 - ✅ **Phase 10: SMTP & Communications**
 - ✅ **Phase 12: Tiered Features & Search UX**
-- ✅ **Phase 13: Stripe Monetization**
-- ✅ **Phase 14: Subscription Commander Dashboard**
-- ✅ **Resilience Hardening: Per-Email Lockout & Hammer**
-- ✅ **Testing Implementation: Vitest Integrated & Initial Suite Operational**
+- ✅ **Utility Phase: Trash & Recovery + Bulk Operations**
 - 🧪 **Requirement Audit:** 100% verified (All academic core logic and UI components live)
 - ✅ **Resilience Hardening: 10s Safety Timers & Sign-Out Hammer**
   > [!NOTE]
@@ -166,13 +163,13 @@ StashSnap is a personal inventory management application designed to help caregi
 - [ ] Tag management
 
 #### 2.7 Trash & Recovery
-- [ ] Soft delete (move to trash)
-- [ ] Trash bin view
-- [ ] Restore from trash
-- [ ] Permanent delete
-- [ ] Auto-delete after 30 days
-- [ ] Bulk trash operations
-- [ ] Trash expiration warnings
+- [x] Soft delete (move to trash)
+- [x] Trash bin view
+- [x] Restore from trash
+- [x] Permanent delete
+- [x] Auto-delete after 30 days logic (Service-layer ready)
+- [x] Bulk trash operations
+- [x] Trash expiration warnings
 
 #### 2.8 Analytics & Insights
 - [ ] Total inventory value
@@ -211,7 +208,7 @@ StashSnap is a personal inventory management application designed to help caregi
 - [x] Desktop-optimized layout
 - [x] Keyboard shortcuts (Ctrl+S Save Implemented)
 - [ ] Drag-and-drop photo upload
-- [ ] Bulk operations
+- [x] Bulk operations (Delete, Move to Trash, Restore)
 - [ ] Advanced filtering UI (Phase 12 In Progress)
 - [ ] Print functionality
 - [ ] Browser notifications
@@ -348,7 +345,7 @@ stashsnap/
 | **Authentication** | ✅ Complete | ✅ Complete | Critical |
 | **Cloud Sync** | 🚧 Designing | 🚧 Full | Critical |
 | **Multi-device** | ❌ None | 🚧 Full | High |
-| **Trash/Recovery** | ❌ None | 🚧 Full | Medium |
+| **Trash/Recovery** | ✅ Complete | ✅ Complete | Medium |
 | **Tags** | ❌ None | 🚧 Full | Medium |
 | **Analytics** | ⚠️ Basic | 🚧 Advanced | Medium |
 | **Sharing** | ❌ None | 🚧 Full | Low |

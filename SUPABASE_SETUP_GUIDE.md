@@ -103,21 +103,16 @@ In the same **URL Configuration** page:
 2. Click **Add URL** (or enter in text area)
 3. Add these URLs:
    ```
-   http://localhost:5173
-   http://localhost:5173/
-   http://localhost:5173/auth/sign-in
-   http://localhost:5173/auth/sign-up
+   http://localhost:5173/**
+   http://192.168.1.221:5173/**
+   https://stashsnapvault.netlify.app/**
    ```
-4. When you deploy to production, add:
-   ```
-   https://yourdomain.com
-   https://yourdomain.com/
-   https://yourdomain.com/auth/sign-in
-   https://yourdomain.com/auth/sign-up
-   ```
-5. Click **SAVE**
+4. **Note on Reset Password:** The `localhost:5173/**` wildcard automatically covers sub-pages like `/auth/reset-password`. You do not need to list them individually.
+5. **Security Alert:** **Avoid** using `https://*.netlify.app`. This is a broad wildcard that allows redirects to *any* Netlify application, which could allow an attacker to intercept your authentication tokens. Always use your specific domain with the `/**` suffix.
+6. Click **SAVE**
 
-**Why:** After OAuth, Supabase redirects to one of these URLs. Without them listed, the redirect will fail.
+ > [!IMPORTANT]
+> **URL Synchronization:** If you ever change your Netlify site name or use a custom domain, you **MUST** update both the **Site URL** and **Redirect URLs** in your Supabase Dashboard. If these don't match your live site, users will get redirect errors after confirming their email.
 
 ✅ **Redirect URLs are configured!**
 
@@ -246,6 +241,8 @@ create table vault_items (
   jurisdiction_city text,
   jurisdiction_state text,
   jurisdiction_country text,
+  deleted_at timestamp with time zone,
+  trash_expires_at timestamp with time zone,
   created_at timestamp with time zone default timezone('utc'::text, now()) not null,
   updated_at timestamp with time zone default timezone('utc'::text, now()) not null
 );

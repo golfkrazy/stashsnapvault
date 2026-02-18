@@ -15,6 +15,7 @@
 - **Stripe & Subscriptions:** Edge Functions for checkout and webhooks live. Item limit (10) for Free tier enforced with branded error modals. Comprehensive `Stripe_Payment_Setup.md` created.
 - **Shared Device Security:** Per-email login lockout logic for shared devices implemented.
 - **AI UX:** Premium "Purple Shine" semantic search toggle with auto-ON state.
+- **Utility:** Trash & Recovery (Soft Delete) and Bulk Operations (Multi-select) fully implemented.
 
 ---
 
@@ -33,13 +34,9 @@
 - [ ] **Dexie.js Integration**: Install and configure IndexedDB for offline persistence.
 - [ ] **Sync Service (`SyncService.ts`)**: Create reconciliation logic between IndexedDB and Supabase.
 
-### 3. Core Utility & "Snap" Resilience
-- [ ] **Trash & Recovery**: Implement soft-delete (Trash Bin) functionality to prevent accidental data loss.
-- [ ] **Bulk Operations**: Enable multi-select and bulk-edit for efficient vault management.
-- [ ] **Downgrade Flow**: Implement the \$9.99 grace fee for canceled premium users to maintain vault integrity.
-
-### 4. Monetization & Incentives
+### 3. Monetization & Incentives
 - [ ] **Renewal Incentive**: Loyalty 15% discount logic for 6-month subscribers to boost LTV.
+- [ ] **Downgrade Flow**: Implement the $9.99 grace fee for canceled premium users to maintain vault integrity.
 
 ---
 

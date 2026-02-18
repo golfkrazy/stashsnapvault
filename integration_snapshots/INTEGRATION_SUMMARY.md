@@ -59,6 +59,8 @@ To prevent documentation drift, the following files **must** be updated at the e
 - ✅ **Profile UX:** Implemented `Ctrl+S` and redesigned "All Set!" success flow.
 - ✅ **Landing Page Polish:** Optimized "Start Using" CTA reliability and hero copy/emoji alignment.
 - ✅ **Step 1: Testing Framework:** Installed Vitest, configured types, and verified sanity tests.
+- ✅ **Trash & Recovery:** Implemented soft-delete, 30-day expiration, and specialized Trash Bin page.
+- ✅ **Bulk Operations:** Multi-select capabilities and batch actions (trash, restore, delete) in all views.
 - ✅ **Stripe Synchronization:** Fixed Edge Function body usage bug and implemented `refreshProfile` auto-sync.
 - ✅ **Subscription Guard:** Implemented 10-item limit for FREE users with `BrandErrorModal` upgrade prompts.
 - ✅ **UI Polish:** Premium "Purple Shine" AI toggle with default ON state for paid users.
@@ -182,16 +184,16 @@ The plan is approved. We will now proceed with **Phase 1: Set Up Base**.
 - ✅ **Dexie.js Integration:** Set up IndexedDB schema with Dexie in `package.json`.
 - [ ] **Sync Logic:** Implement `SyncService.ts` for Supabase-to-Dexie reconciliation.
 - ✅ **Tier Enforcement:** Implement 10-item limit logic in `AddItemPage.tsx`.
+- ✅ **Bulk Toolkit:** Implemented multi-select and batch actions for efficient vaulting.
 
 ### Phase 8: AI Chatbot & Analytics
 - [x] **Semantic Search:** Restored functionality and fixed RLS induction loops.
 - [ ] **AI Widget:** Implement `ChatWidget.tsx` (Glassy AI Orb).
 
 ### Phase 9-11: Final Polish
-- [x] **Automated Guardian (UI):** Expiration highlights and warnings visible on Item Cards.
-- [ ] **Backend Job:** Restore `check-expirations` Edge Function and Resend integration.
-- [x] **Unit Testing:** Initialized Vitest framework and basic test coverage.
-- [ ] **Commander Screen:** Add "Subscription Management" dashboard for admins.
+- [x] **Commander Screen:** Add "Subscription Management" dashboard for admins.
+- [x] **Trash & Recovery:** Soft-delete and recovery systems live.
+- [ ] **Monetization:** Implement $9.99 "Storage Grace Fee" for canceled subscribers.
 - [ ] **Monetization:** Implement $9.99 "Storage Grace Fee" for canceled subscribers.
 - [ ] **E2E Testing:** Verify sync under "offline" conditions.
 - [ ] **Submission Prep:** Finalize academic documentation for Dr. Lee.

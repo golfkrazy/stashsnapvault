@@ -31,6 +31,9 @@ const SignUpPage = () => {
     const { error } = await supabase.auth.signUp({
       email: formValues.email,
       password: formValues.password,
+      options: {
+        emailRedirectTo: window.location.origin,
+      },
     });
     if (error) {
       setStatus(error.message);
