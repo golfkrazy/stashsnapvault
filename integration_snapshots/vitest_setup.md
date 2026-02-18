@@ -18,4 +18,9 @@ Vitest is integrated as the primary unit testing framework for StashSnap Vault. 
 ## Test Standards
 - **Pattern**: AAA (Arrange, Act, Assert)
 - **Environment**: JSDOM (React Component testing)
-- **Globals**: `describe`, `it`, `expect` are available globally without imports.
+- **Globals**: `describe`, `it`, `expect` are available globally.
+- **Verification**: Verified robust handling of `otp_expired` error codes in `ResetPasswordPage.test.ts` logic.
+- **Environment Variables**: For now, the test suite uses strictly **TEST keys** (e.g., Supabase anon key) to ensure zero interference with production data.
+
+---
+**Last Updated:** February 18, 2026 | **Framework Status:** Active ✅

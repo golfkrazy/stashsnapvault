@@ -19,6 +19,14 @@ Welcome to the StashSnap Vault beta! This document is your guide to testing the 
     - **Instructions:** Go to Profile, upload a photo, and use `Ctrl+S` to save.
     - **Expected:** Success toast "Profile Updated!"; avatar should persist after refresh.
     - **Anomalies:** Photo not uploading; `Ctrl+S` not triggering save; save takes longer than 10 seconds.
+- [ ] **Professional Auth Emails**
+    - **Instructions:** Check the signup/reset emails received.
+    - **Expected:** Emails should have a cyan "StashSnap Vault" button, clear branding, and look professional.
+    - **Anomalies:** Red "Dangerous" banner in Gmail.
+- [ ] **Password Reset Error Logic**
+    - **Instructions:** Request a reset link, wait 10+ minutes (or click it twice).
+    - **Expected:** You should see a friendly "Link Expired" screen with a "Get Fresh Link" button.
+    - **Anomalies:** Seeing a raw Supabase error or a 404 page.
 
 ---
 

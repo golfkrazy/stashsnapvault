@@ -96,6 +96,9 @@ StashSnap is a personal inventory management application designed to help caregi
 - [x] Email/password signup
 - [x] Email/password login
 - [x] Password reset/recovery (Branded UI Complete)
+- [x] **Password Reset Error Logic** (Branded UI for expired/invalid tokens)
+- [x] **Professional Auth Emails** (Customized HTML templates for all events)
+- [x] **Netlify SPA Routing** (_redirects fixed)
 - [x] Session management
 - [ ] Multi-device sessions (Pending Sync)
 - [ ] Session timeout

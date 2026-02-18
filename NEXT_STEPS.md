@@ -1,21 +1,21 @@
 # StashSnap - Technical Roadmap & Next Steps
  
-**Status:** Phase 1-5 Complete. Phase 7-11 Complete. Entering **Phase 13: Stripe integration**.
+**Status:** Utility Phase & Authentication Professionalization Complete. Entering **Phase 6: Local-First Resilience**.
  
 ---
  
 ## ✅ Completed Milestones
-- **Infrastructure:** Vite + React 19 + TypeScript base established.
-- **Authentication:** Supabase Auth (Email/Pass + Google OAuth) fully operational with `select_account` prompt.
+- **Infrastructure:** Vite + React 19 + TypeScript base + Netlify SPA Routing fix.
+- **Authentication Professionalized:** 
+    - 8 customized HTML templates (Signup, Reset, Magic Link, etc.).
+    - Robust error handling for `otp_expired` reset links.
+    - Explicit `emailRedirectTo` origin management.
 - **Profiles:** User Profiles, Avatar Storage, Ctrl+S Save, and "All Set!" flow complete.
-- **Inventory UI:** `InventoryPage.tsx` and `EditItemPage.tsx` functional with site-wide branding.
-- **Admin Command Center:** Dashboard with stats and user management live.
-- **Branding:** Site-wide `BrandHeader` and `BrandFooter` consolidated.
+- **Inventory UI & Utilities:** `InventoryPage.tsx` functional with Multi-select, Trash & Recovery, and Bulk Operations.
+- **Admin Command Center:** Dashboard with stats and Subscription Management ledger live.
 - **Testing:** Vitest framework established with 100% sanity pass rate.
-- **Stripe & Subscriptions:** Edge Functions for checkout and webhooks live. Item limit (10) for Free tier enforced with branded error modals. Comprehensive `Stripe_Payment_Setup.md` created.
-- **Shared Device Security:** Per-email login lockout logic for shared devices implemented.
+- **Stripe & Subscriptions:** Edge Functions for checkout and webhooks live. Item limit (10) for Free tier enforced.
 - **AI UX:** Premium "Purple Shine" semantic search toggle with auto-ON state.
-- **Utility:** Trash & Recovery (Soft Delete) and Bulk Operations (Multi-select) fully implemented.
 
 ---
 
