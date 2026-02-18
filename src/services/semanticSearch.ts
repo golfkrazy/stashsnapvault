@@ -17,7 +17,7 @@ export interface SearchResult {
 
 export async function performSemanticSearch(
     query: string,
-    userId: string,
+    _userId: string,
     options: SearchOptions
 ): Promise<SearchResult[]> {
     try {
