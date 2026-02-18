@@ -348,33 +348,102 @@ To reduce "scary" warnings in Gmail and ensure links don't expire too quickly, f
 
 ### 11.1 Adjust Email Expiration (OTP Expiry)
 
-1. Go to **Authentication** (sidebar lock icon)
-2. Look for the **Configuration** section in the submenu
-3. Click **Auth Settings**
-4. Scroll down to **Security and Protection**
-5. Find **Email link expiration** (default is 3600 seconds/1 hour)
-6. Change to at least **600 seconds** (10 minutes) or your preferred window.
-7. Click **SAVE**
+If you can't see "Auth Settings", try one of these two paths:
+
+**Path A (Direct):**
+1. Click the **Authentication** icon in the far-left sidebar (looks like a **User with a Lock**).
+2. Look at the *secondary sidebar* that just slid out.
+3. Under the **Configuration** header, click **Auth Settings**.
+4. Scroll down to the **Security** section.
+5. Change **Email link expiration (seconds)** to **600**.
+
+**Path B (Via Settings):**
+1. Click the **Settings** icon at the very bottom of the far-left sidebar (the **Gear** icon ⚙️).
+2. In the menu that appears, click **Authentication**.
+3. Scroll down until you see the **Security** section.
+4. Update the **Email link expiration (seconds)** to **600** (10 minutes).
+5. Click **SAVE** at the bottom.
 
 ### 11.2 Professionalize Email Templates
 
 Gmail often flags generic Supabase emails as "dangerous" if the subject is cold and the body is minimal.
 
 1. Go to **Authentication** → **Email Templates**
-2. Select **Confirm Signup** or **Reset Password**
+2. Select **Confirm Signup**, **Reset Password**, or **Magic Link**
 3. **Customize your Subject:**
    - Instead of "Confirm your signup", use: `✨ Welcome to StashSnap Vault - Confirm Your Secure Account`
    - Instead of "Reset Your Password", use: `🔐 Reset Your StashSnap Vault Password`
+   - Instead of "Magic Link", use: `🔑 Your Secure StashSnap Vault Login Link`
 4. **Customize your Message Body:**
    - Use a professional, warm tone.
-   - Mention the expiry: *"This link is valid for 5 minutes for your security."*
-   - Example Template (Copy-Paste):
+   - Mention the expiry: *"This link is valid for 10 minutes for your security."*
+   - **Template: Confirm Signup**
    ```html
-   <h2>Welcome to StashSnap Vault!</h2>
-   <p>You requested to confirm your account. Please click the button below to secure your vault:</p>
-   <a href="{{ .ConfirmationURL }}" style="background:#22d3ee; color:#000; padding:10px 20px; text-decoration:none; border-radius:5px; font-weight:bold;">Secure My Vault</a>
-   <p>This secure link is single-use and will expire in 5 minutes.</p>
+   <h2>✨ Welcome to StashSnap Vault!</h2>
+   <p>Thank you for signing up. Please click the button below to confirm your email and secure your vault:</p>
+   <a href="{{ .ConfirmationURL }}" style="background:#22d3ee; color:#000; padding:12px 24px; text-decoration:none; border-radius:8px; font-weight:bold; display:inline-block;">Confirm My Account</a>
+   <p>This is a secure, single-use link. For your protection, it will expire in 10 minutes.</p>
+   <p>If you didn't create an account, you can safely ignore this email.</p>
+   ```
+   - **Template: Reset Password**
+   ```html
+   <h2>🔐 Reset Your StashSnap Vault Password</h2>
+   <p>You requested to reset your password. Please click the secure button below to choose a new one:</p>
+   <a href="{{ .ConfirmationURL }}" style="background:#22d3ee; color:#000; padding:12px 24px; text-decoration:none; border-radius:8px; font-weight:bold; display:inline-block;">Reset My Password</a>
+   <p>This is a single-use link. For your security, it will expire in 10 minutes.</p>
+   <p>If you didn't request a password reset, you can safely ignore this email.</p>
+   ```
+   - **Template: Magic Link**
+   ```html
+   <h2>🔑 Your StashSnap Vault Secure Login</h2>
+   <p>You requested a secure login link. Click the button below to enter your vault:</p>
+   <a href="{{ .ConfirmationURL }}" style="background:#22d3ee; color:#000; padding:12px 24px; text-decoration:none; border-radius:8px; font-weight:bold; display:inline-block;">Log Into My Vault</a>
+   <p>This secure link is single-use and will expire in 10 minutes.</p>
    <p>If you didn't request this, you can safely ignore this email.</p>
+   ```
+   - **Template: Invite** (For manual user additions)
+   ```html
+   <h2>🤝 You've Been Invited to StashSnap Vault!</h2>
+   <p>You have been invited to join the StashSnap Vault community. Please click the button below to accept your invitation and set up your account:</p>
+   <a href="{{ .ConfirmationURL }}" style="background:#22d3ee; color:#000; padding:12px 24px; text-decoration:none; border-radius:8px; font-weight:bold; display:inline-block;">Accept My Invitation</a>
+   <p>For your security, this invitation link is single-use and will expire in 10 minutes.</p>
+   <p>Welcome aboard!</p>
+   ```
+   - **Template: Confirm Email Change**
+   ```html
+   <h2>🔍 Confirm Your New Email Address</h2>
+   <p>You requested to change your email address for StashSnap Vault. To complete this update from <strong>{{ .Email }}</strong> to <strong>{{ .NewEmail }}</strong>, please click the button below:</p>
+   <a href="{{ .ConfirmationURL }}" style="background:#22d3ee; color:#000; padding:12px 24px; text-decoration:none; border-radius:8px; font-weight:bold; display:inline-block;">Confirm New Email</a>
+   <p>For your security, this confirmation link is single-use and will expire in 10 minutes.</p>
+   <p>If you didn't request this change, please contact support immediately.</p>
+   ```
+   - **Template: Confirm Reauthentication** (Numeric Token)
+   ```html
+   <h2>🛡️ Confirm Your Identity</h2>
+   <p>For your security, please use the verification code below to confirm your identity and continue to your vault:</p>
+   <div style="background:#f3f4f6; color:#1f2937; padding:20px; text-align:center; font-size:2rem; font-weight:bold; letter-spacing:5px; border-radius:12px; border:2px solid #22d3ee; margin:20px 0;">
+     {{ .Token }}
+   </div>
+   <p>This secure code is valid for 10 minutes. <strong>Never share this code with anyone.</strong></p>
+   <p>If you didn't request this, please change your password immediately.</p>
+   ```
+   - **Template: Password Changed** (Confirmation)
+   ```html
+   <h2>✅ Password Successfully Changed</h2>
+   <p>This is a confirmation that the password for your StashSnap Vault account (<strong>{{ .Email }}</strong>) has been successfully updated.</p>
+   <div style="background:#ecfeff; border-left:4px solid #22d3ee; padding:15px; margin:20px 0; color:#164e63;">
+     <strong>Security Note:</strong> If you did <strong>not</strong> make this change, please contact our support team immediately to secure your account.
+   </div>
+   <p>Thank you for keeping your vault secure!</p>
+   ```
+   - **Template: Email Address Changed** (Confirmation)
+   ```html
+   <h2>✅ Email Address Successfully Changed</h2>
+   <p>This is a confirmation that the email address for your StashSnap Vault account has been successfully updated from <strong>{{ .OldEmail }}</strong> to <strong>{{ .Email }}</strong>.</p>
+   <div style="background:#ecfeff; border-left:4px solid #22d3ee; padding:15px; margin:20px 0; color:#164e63;">
+     <strong>Security Note:</strong> If you did <strong>not</strong> make this change, please contact our support team immediately to secure your account.
+   </div>
+   <p>Thank you for keeping your vault secure!</p>
    ```
 5. Click **SAVE** for each template edited.
 
