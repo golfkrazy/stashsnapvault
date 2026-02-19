@@ -331,7 +331,7 @@ const InventoryPage: React.FC = () => {
 
                     <div className="items-grid" style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+                        gridTemplateColumns: 'repeat(auto-fill, minmax(230px, 1fr))',
                         gap: '1rem',
                         width: '100%',
                         marginTop: '1rem',
@@ -352,17 +352,15 @@ const InventoryPage: React.FC = () => {
                                 )}
                             </div>
                         ) : (
-                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.5rem' }}>
-                                {displayItems.map(item => (
-                                    <VaultItemCard
-                                        key={item.id}
-                                        item={item}
-                                        onDelete={() => setItems(prev => prev.filter(i => i.id !== item.id))}
-                                        selected={selectedItems.includes(item.id)}
-                                        onSelect={handleSelectItem}
-                                    />
-                                ))}
-                            </div>
+                            displayItems.map(item => (
+                                <VaultItemCard
+                                    key={item.id}
+                                    item={item}
+                                    onDelete={() => setItems(prev => prev.filter(i => i.id !== item.id))}
+                                    selected={selectedItems.includes(item.id)}
+                                    onSelect={handleSelectItem}
+                                />
+                            ))
                         )}
                     </div>
                 </div>

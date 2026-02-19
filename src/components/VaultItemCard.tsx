@@ -49,12 +49,12 @@ const VaultItemCard: React.FC<VaultItemCardProps> = ({ item, onDelete, selected,
             backdropFilter: 'var(--glass-blur)',
             borderRadius: '12px',
             border: '1px solid var(--glass-border)',
-            padding: '1rem',
+            padding: '0.8rem',
             transition: 'transform 0.3s ease, box-shadow 0.3s ease',
             cursor: 'pointer',
             display: 'flex',
             flexDirection: 'column',
-            gap: '0.8rem',
+            gap: '0.6rem',
             height: '100%'
         }}>
             <div style={{
@@ -147,7 +147,7 @@ const VaultItemCard: React.FC<VaultItemCardProps> = ({ item, onDelete, selected,
 
             <div style={{ flex: 1 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.4rem' }}>
-                    <h3 style={{ fontSize: '1.1rem', color: 'var(--text-light)', margin: 0 }}>{item.title}</h3>
+                    <h3 style={{ fontSize: '1rem', color: 'var(--text-light)', margin: 0 }}>{item.title}</h3>
                     {item.value && item.value > 0 && (
                         <span style={{ color: 'var(--accent-golden-yellow)', fontWeight: 'bold' }}>
                             ${Number(item.value).toFixed(2)}
@@ -191,7 +191,7 @@ const VaultItemCard: React.FC<VaultItemCardProps> = ({ item, onDelete, selected,
                 justifyContent: 'flex-end',
                 gap: '0.5rem',
                 borderTop: '1px solid var(--glass-border)',
-                paddingTop: '0.8rem',
+                paddingTop: '0.6rem',
                 marginTop: 'auto'
             }}>
                 <button
