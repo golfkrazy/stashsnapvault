@@ -57,12 +57,14 @@ To prevent documentation drift, the following files **must** be updated at the e
 - ✅ **Step 1: Testing Framework:** Installed Vitest, configured types, and verified sanity tests.
 - ✅ **Trash & Recovery:** Implemented soft-delete, 30-day expiration, and specialized Trash Bin page.
 - ✅ **Bulk Operations:** Multi-select capabilities and batch actions (trash, restore, delete) in all views.
+- ✅ **Grid Optimization:** Implemented high-density 3-across inventory layout.
 - ✅ **Subscription Guard:** Implemented 10-item limit for FREE users.
 - ✅ **Professional Authentication:** 
     - ✅ **Branded Emails**: Created 8 professional HTML templates for all auth events.
     - ✅ **Redirect Fixes**: Implemented Netlify `_redirects` and explicitly handled auth origins.
     - ✅ **Error Handling**: Implemented robust UI for `otp_expired` and invalid reset links.
     - ✅ **Security**: Per-email lockout logic for shared devices.
+    - ✅ **Backend Hardening**: Resolved "SECURITY DEFINER" lint warnings and secured `password_reset_tokens` with RLS.
 
 ---
 

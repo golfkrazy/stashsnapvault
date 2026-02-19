@@ -105,6 +105,24 @@ Welcome to the StashSnap Vault beta! This document is your guide to testing the 
     - **Anomalies:** Stripe failing to load; celebration modal not appearing after successful payment.
 
 ---
+ 
+ ## 6. Security & UI Density
+ *Goal: Verify backend hardening and visual optimization.*
+ 
+ - [ ] **Security Audit: Views & RLS**
+     - **Instructions:** Check the "Command Center" dashboard and category counts.
+     - **Expected:** Data should load correctly. Behind the scenes, these now use `security_invoker` for standard-compliant RLS.
+     - **Anomalies:** "0" items shown when items clearly exist; permission denied errors.
+ - [ ] **Password Reset Resilience**
+     - **Instructions:** Request a reset. (Admin/Dev verify `password_reset_tokens` has RLS enabled).
+     - **Expected:** Standard users cannot see each other's tokens.
+     - **Anomalies:** RLS not enabled warnings in Supabase.
+ - [ ] **UI Grid Density**
+     - **Instructions:** Open the Inventory Page on a standard desktop browser.
+     - **Expected:** You should see **3 items across** in the grid. Cards should feel compact and professional.
+     - **Anomalies:** Items still in 1 or 2 columns; text overflowing card boundaries.
+ 
+---
 
 ## 🛑 What to Report (Anomalies)
 - **Lag:** Anything taking longer than 3 seconds (except search/embeddings, which can take ~5s).

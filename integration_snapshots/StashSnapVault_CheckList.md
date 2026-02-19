@@ -109,7 +109,8 @@ StashSnap is a personal inventory management application designed to help caregi
 - [x] Google OAuth Integration (Select Account Prompt Active)
 
 #### 2.2 Security Features
-- [x] Row Level Security (RLS)
+- [x] Row Level Security (RLS) ✅ (Items, Categories, Reset Tokens)
+- [x] **RLS Hardening**: Enabled `security_invoker = true` on all public views.
 - [ ] Encrypted data storage
 - [ ] Secure photo storage
 - [x] API authentication tokens (Supabase handled)
@@ -212,6 +213,7 @@ StashSnap is a personal inventory management application designed to help caregi
 - [x] Keyboard shortcuts (Ctrl+S Save Implemented)
 - [ ] Drag-and-drop photo upload
 - [x] Bulk operations (Delete, Move to Trash, Restore)
+- [x] **Grid Optimization**: High-density 3-across display active for Inventory.
 - [ ] Advanced filtering UI (Phase 12 In Progress)
 - [ ] Print functionality
 - [ ] Browser notifications

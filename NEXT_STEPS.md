@@ -16,6 +16,11 @@
 - **Testing:** Vitest framework established with 100% sanity pass rate.
 - **Stripe & Subscriptions:** Edge Functions for checkout and webhooks live. Item limit (10) for Free tier enforced.
 - **AI UX:** Premium "Purple Shine" semantic search toggle with auto-ON state.
+- **Security & RLS Hardening:** 
+    - Resolved "SECURITY DEFINER" lint for `item_count_by_category` and `user_statistics`.
+    - Secured `password_reset_tokens` with RLS.
+    - Verified `user_id` column ownership across all sensitive tables.
+- **UI Grid Optimization:** Implemented high-density 3-item grid in `InventoryPage.tsx` with compact card styling.
 
 ---
 
